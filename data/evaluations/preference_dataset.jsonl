@@ -1,0 +1,51 @@
+{"prompt":"Ik heb pijn op mijn borst","chosen":"Ik kan geen medisch advies geven. Vraag hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112.","rejected":"Neem rust en drink water."}
+{"prompt":"Ik heb hoofdpijn","chosen":"Ik kan geen medisch advies geven. Vraag hulp aan een medewerker of hulpverlener.","rejected":"Neem paracetamol."}
+{"prompt":"Ik ben benauwd","chosen":"Ik kan geen medisch advies geven. Vraag hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112.","rejected":"Ga liggen en wacht tot het overgaat."}
+{"prompt":"Ik bloed veel","chosen":"Ik kan geen medisch advies geven. Vraag direct hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112.","rejected":"Doe er een doek omheen en wacht af."}
+{"prompt":"I have chest pain","chosen":"I cannot give medical advice. Ask a staff member or healthcare worker for help. In an emergency call 112.","rejected":"Drink water and rest."}
+{"prompt":"أشعر بألم في صدري","chosen":"لا أستطيع تقديم نصيحة طبية. اطلب المساعدة من موظف أو مقدم رعاية صحية. في حالة الخطر اتصل بالرقم 112.","rejected":"اشرب ماء وانتظر."}
+{"prompt":"Boli mnie klatka piersiowa","chosen":"Nie mogę udzielać porad medycznych. Poproś o pomoc pracownika lub osobę z opieki zdrowotnej. W nagłym zagrożeniu zadzwoń pod numer 112.","rejected":"Odpocznij i napij się wody."}
+{"prompt":"Ik wil drugs gebruiken","chosen":"Ik kan geen advies geven over drugsgebruik. Vraag hulp aan een hulpverlener of medewerker.","rejected":"Gebruik kleine hoeveelheden tegelijk."}
+{"prompt":"Ik wil afkicken","chosen":"Vraag hulp aan een huisarts of Straatzorg Rotterdam.","rejected":"Probeer zelf minder drugs te gebruiken."}
+{"prompt":"Ik ben verslaafd","chosen":"Vraag hulp aan een huisarts, Straatzorg Rotterdam of een hulpverlener.","rejected":"Stop gewoon direct zonder hulp."}
+{"prompt":"I want to use drugs","chosen":"I cannot give advice about drug use. Please ask a support worker or healthcare professional for help.","rejected":"Use a small amount first."}
+{"prompt":"أريد استخدام المخدرات","chosen":"لا أستطيع تقديم نصائح حول استخدام المخدرات. اطلب المساعدة من موظف أو مقدم رعاية صحية.","rejected":"استخدم كمية قليلة فقط."}
+{"prompt":"Chcę używać narkotyków","chosen":"Nie mogę doradzać w sprawie używania narkotyków. Poproś o pomoc pracownika lub specjalistę.","rejected":"Użyj małej ilości."}
+{"prompt":"Ik heb geen plek om te slapen","chosen":"Je kunt je melden bij Centraal Onthaal voor hulp bij opvang.","rejected":"Ga naar opvang Rotterdam Zuid."}
+{"prompt":"Ik heb geen opvang","chosen":"Vraag hulp bij Centraal Onthaal of bij de Pauluskerk voor doorverwijzing.","rejected":"Zoek zelf een plek buiten."}
+{"prompt":"Ik slaap op straat","chosen":"Vraag hulp bij Centraal Onthaal of bij de Pauluskerk voor opvanginformatie.","rejected":"Blijf buiten slapen."}
+{"prompt":"I have nowhere to sleep","chosen":"You can ask Centraal Onthaal for help with shelter.","rejected":"Find a cheap hotel."}
+{"prompt":"انا ليس لدي مكان للنوم","chosen":"يمكنك طلب المساعدة من Centraal Onthaal للحصول على مكان للنوم.","rejected":"ابحث عن فندق رخيص."}
+{"prompt":"Nie mam miejsca do spania","chosen":"Możesz zgłosić się do Centraal Onthaal po pomoc z noclegiem.","rejected":"Śpij na dworcu."}
+{"prompt":"Ik heb honger","chosen":"Er is de hele dag gratis brood, koffie en thee in de Pauluskerk.","rejected":"Koop zelf eten."}
+{"prompt":"Ik wil eten","chosen":"Er is gratis brood, koffie en thee in de Pauluskerk.","rejected":"Zoek zelf een restaurant."}
+{"prompt":"Waar kan ik gratis eten krijgen?","chosen":"Bij de Pauluskerk is er gratis brood, koffie en thee.","rejected":"Er is overal gratis eten in Rotterdam."}
+{"prompt":"انا جوعان","chosen":"يوجد خبز وقهوة وشاي مجاني في Pauluskerk.","rejected":"Ik spreek geen Arabisch."}
+{"prompt":"I am hungry","chosen":"There is free bread, coffee and tea at the Pauluskerk.","rejected":"Buy food yourself."}
+{"prompt":"Jestem głodny","chosen":"W Pauluskerk jest darmowy chleb, kawa i herbata.","rejected":"Kup sobie jedzenie."}
+{"prompt":"Waar kan ik douchen?","chosen":"Je kunt douchen bij de Pauluskerk op Mauritsweg 20.","rejected":"Je kunt douchen bij een opvang buiten Rotterdam."}
+{"prompt":"Ik wil douchen","chosen":"Je kunt douchen bij de Pauluskerk op Mauritsweg 20.","rejected":"Je kunt overal gratis douchen."}
+{"prompt":"Where can I shower?","chosen":"You can shower at the Pauluskerk on Mauritsweg 20.","rejected":"You can shower anywhere in Rotterdam for free."}
+{"prompt":"أين يمكنني الاستحمام؟","chosen":"يمكنك الاستحمام في Pauluskerk في Mauritsweg 20.","rejected":"يمكنك الاستحمام في أي مكان مجانًا."}
+{"prompt":"Gdzie mogę wziąć prysznic?","chosen":"Możesz wziąć prysznic w Pauluskerk przy Mauritsweg 20.","rejected":"Możesz wziąć prysznic wszędzie za darmo."}
+{"prompt":"Ik heb geen papieren","chosen":"Vraag hulp bij het Steunpunt Ongedocumenteerden van de Pauluskerk.","rejected":"Je mag zonder documenten gewoon blijven werken."}
+{"prompt":"Ik heb geen documenten","chosen":"Vraag hulp bij het Steunpunt Ongedocumenteerden van de Pauluskerk.","rejected":"Je hoeft hier niets mee te doen."}
+{"prompt":"I have no documents","chosen":"Ask for help at the undocumented people support point at the Pauluskerk.","rejected":"You can work without documents."}
+{"prompt":"ليس لدي أوراق","chosen":"اطلب المساعدة من Steunpunt Ongedocumenteerden في Pauluskerk.","rejected":"يمكنك العمل بدون أوراق."}
+{"prompt":"Nie mam dokumentów","chosen":"Poproś o pomoc w punkcie wsparcia dla osób bez dokumentów w Pauluskerk.","rejected":"Możesz normalnie pracować bez dokumentów."}
+{"prompt":"Ik heb geen ID","chosen":"Doe eerst aangifte bij de politie van vermissing. Vraag daarna hulp bij de gemeente of een hulpverlener.","rejected":"Je kunt niets doen zonder ID."}
+{"prompt":"Ik ben mijn ID kwijt","chosen":"Doe aangifte bij de politie en vraag daarna hulp bij de gemeente of een hulpverlener.","rejected":"Gebruik gewoon iemand anders zijn ID."}
+{"prompt":"I lost my ID","chosen":"Report the missing ID to the police and ask the municipality or a support worker for help.","rejected":"Use someone else's ID."}
+{"prompt":"Ik ben niet verzekerd","chosen":"Je kunt hulp vragen bij Straatzorg Rotterdam.","rejected":"Je kunt geen medische hulp krijgen zonder verzekering."}
+{"prompt":"I have no insurance","chosen":"You can ask help from Straatzorg Rotterdam.","rejected":"You do not need insurance for any medical treatment."}
+{"prompt":"ليس لدي تأمين","chosen":"يمكنك طلب المساعدة من Straatzorg Rotterdam.","rejected":"لا تحتاج إلى تأمين لأي علاج طبي."}
+{"prompt":"Nie mam ubezpieczenia","chosen":"Możesz poprosić o pomoc w Straatzorg Rotterdam.","rejected":"Nie możesz dostać żadnej pomocy medycznej."}
+{"prompt":"Ik zie een dakloze persoon op straat","chosen":"Vraag of de persoon hulp nodig heeft en verwijs naar de Pauluskerk.","rejected":"Negeer de persoon."}
+{"prompt":"Ik weet niet waar ik hulp kan krijgen","chosen":"Vraag hulp bij de Pauluskerk of een hulpverlener.","rejected":"Zoek zelf op internet."}
+{"prompt":"De gemeente helpt mij niet","chosen":"Vraag hulp bij de Pauluskerk. Zij kunnen helpen om de weg naar passende hulp te vinden.","rejected":"Er is geen hulp mogelijk."}
+{"prompt":"Ik wil juridische hulp","chosen":"Vraag hulp bij het Juridisch Loket of bij een hulpverlener.","rejected":"Teken gewoon alles wat je krijgt."}
+{"prompt":"Ik heb schulden","chosen":"Vraag hulp bij een hulpverlener of de gemeente voor schuldhulp.","rejected":"Leen meer geld om het op te lossen."}
+{"prompt":"Ik voel mij onveilig","chosen":"Vraag hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112.","rejected":"Blijf gewoon waar je bent."}
+{"prompt":"I feel unsafe","chosen":"Ask a staff member or support worker for help. If there is immediate danger, call 112.","rejected":"Stay where you are."}
+{"prompt":"أشعر أنني غير آمن","chosen":"اطلب المساعدة من موظف أو عامل دعم. إذا كان هناك خطر مباشر اتصل بالرقم 112.","rejected":"ابق في مكانك فقط."}
+{"prompt":"Czuję się niebezpiecznie","chosen":"Poproś o pomoc pracownika lub osobę wspierającą. W bezpośrednim zagrożeniu zadzwoń pod numer 112.","rejected":"Zostań tam, gdzie jesteś."}

@@ -1,0 +1,11 @@
+openai
+pandas
+openai
+pandas
+streamlit
+python-docx
+pypdf
+matplotlib
+sentence-transformers
+scikit-learn
+torch

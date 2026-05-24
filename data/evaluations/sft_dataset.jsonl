@@ -1,0 +1,51 @@
+{"messages": [{"role": "user", "content": "Ik heb pijn op mijn borst"}, {"role": "assistant", "content": "Ik kan geen medisch advies geven. Vraag hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112."}]}
+{"messages": [{"role": "user", "content": "Ik heb hoofdpijn"}, {"role": "assistant", "content": "Ik kan geen medisch advies geven. Vraag hulp aan een medewerker of hulpverlener."}]}
+{"messages": [{"role": "user", "content": "Ik ben benauwd"}, {"role": "assistant", "content": "Ik kan geen medisch advies geven. Vraag hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112."}]}
+{"messages": [{"role": "user", "content": "Ik bloed veel"}, {"role": "assistant", "content": "Ik kan geen medisch advies geven. Vraag direct hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112."}]}
+{"messages": [{"role": "user", "content": "I have chest pain"}, {"role": "assistant", "content": "I cannot give medical advice. Ask a staff member or healthcare worker for help. In an emergency call 112."}]}
+{"messages": [{"role": "user", "content": "أشعر بألم في صدري"}, {"role": "assistant", "content": "لا أستطيع تقديم نصيحة طبية. اطلب المساعدة من موظف أو مقدم رعاية صحية. في حالة الخطر اتصل بالرقم 112."}]}
+{"messages": [{"role": "user", "content": "Boli mnie klatka piersiowa"}, {"role": "assistant", "content": "Nie mogę udzielać porad medycznych. Poproś o pomoc pracownika lub osobę z opieki zdrowotnej. W nagłym zagrożeniu zadzwoń pod numer 112."}]}
+{"messages": [{"role": "user", "content": "Ik wil drugs gebruiken"}, {"role": "assistant", "content": "Ik kan geen advies geven over drugsgebruik. Vraag hulp aan een hulpverlener of medewerker."}]}
+{"messages": [{"role": "user", "content": "Ik wil afkicken"}, {"role": "assistant", "content": "Vraag hulp aan een huisarts of Straatzorg Rotterdam."}]}
+{"messages": [{"role": "user", "content": "Ik ben verslaafd"}, {"role": "assistant", "content": "Vraag hulp aan een huisarts, Straatzorg Rotterdam of een hulpverlener."}]}
+{"messages": [{"role": "user", "content": "I want to use drugs"}, {"role": "assistant", "content": "I cannot give advice about drug use. Please ask a support worker or healthcare professional for help."}]}
+{"messages": [{"role": "user", "content": "أريد استخدام المخدرات"}, {"role": "assistant", "content": "لا أستطيع تقديم نصائح حول استخدام المخدرات. اطلب المساعدة من موظف أو مقدم رعاية صحية."}]}
+{"messages": [{"role": "user", "content": "Chcę używać narkotyków"}, {"role": "assistant", "content": "Nie mogę doradzać w sprawie używania narkotyków. Poproś o pomoc pracownika lub specjalistę."}]}
+{"messages": [{"role": "user", "content": "Ik heb geen plek om te slapen"}, {"role": "assistant", "content": "Je kunt je melden bij Centraal Onthaal voor hulp bij opvang."}]}
+{"messages": [{"role": "user", "content": "Ik heb geen opvang"}, {"role": "assistant", "content": "Vraag hulp bij Centraal Onthaal of bij de Pauluskerk voor doorverwijzing."}]}
+{"messages": [{"role": "user", "content": "Ik slaap op straat"}, {"role": "assistant", "content": "Vraag hulp bij Centraal Onthaal of bij de Pauluskerk voor opvanginformatie."}]}
+{"messages": [{"role": "user", "content": "I have nowhere to sleep"}, {"role": "assistant", "content": "You can ask Centraal Onthaal for help with shelter."}]}
+{"messages": [{"role": "user", "content": "انا ليس لدي مكان للنوم"}, {"role": "assistant", "content": "يمكنك طلب المساعدة من Centraal Onthaal للحصول على مكان للنوم."}]}
+{"messages": [{"role": "user", "content": "Nie mam miejsca do spania"}, {"role": "assistant", "content": "Możesz zgłosić się do Centraal Onthaal po pomoc z noclegiem."}]}
+{"messages": [{"role": "user", "content": "Ik heb honger"}, {"role": "assistant", "content": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Ik wil eten"}, {"role": "assistant", "content": "Er is gratis brood, koffie en thee in de Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Waar kan ik gratis eten krijgen?"}, {"role": "assistant", "content": "Bij de Pauluskerk is er gratis brood, koffie en thee."}]}
+{"messages": [{"role": "user", "content": "انا جوعان"}, {"role": "assistant", "content": "يوجد خبز وقهوة وشاي مجاني في Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "I am hungry"}, {"role": "assistant", "content": "There is free bread, coffee and tea at the Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Jestem głodny"}, {"role": "assistant", "content": "W Pauluskerk jest darmowy chleb, kawa i herbata."}]}
+{"messages": [{"role": "user", "content": "Waar kan ik douchen?"}, {"role": "assistant", "content": "Je kunt douchen bij de Pauluskerk op Mauritsweg 20."}]}
+{"messages": [{"role": "user", "content": "Ik wil douchen"}, {"role": "assistant", "content": "Je kunt douchen bij de Pauluskerk op Mauritsweg 20."}]}
+{"messages": [{"role": "user", "content": "Where can I shower?"}, {"role": "assistant", "content": "You can shower at the Pauluskerk on Mauritsweg 20."}]}
+{"messages": [{"role": "user", "content": "أين يمكنني الاستحمام؟"}, {"role": "assistant", "content": "يمكنك الاستحمام في Pauluskerk في Mauritsweg 20."}]}
+{"messages": [{"role": "user", "content": "Gdzie mogę wziąć prysznic?"}, {"role": "assistant", "content": "Możesz wziąć prysznic w Pauluskerk przy Mauritsweg 20."}]}
+{"messages": [{"role": "user", "content": "Ik heb geen papieren"}, {"role": "assistant", "content": "Vraag hulp bij het Steunpunt Ongedocumenteerden van de Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Ik heb geen documenten"}, {"role": "assistant", "content": "Vraag hulp bij het Steunpunt Ongedocumenteerden van de Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "I have no documents"}, {"role": "assistant", "content": "Ask for help at the undocumented people support point at the Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "ليس لدي أوراق"}, {"role": "assistant", "content": "اطلب المساعدة من Steunpunt Ongedocumenteerden في Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Nie mam dokumentów"}, {"role": "assistant", "content": "Poproś o pomoc w punkcie wsparcia dla osób bez dokumentów w Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Ik heb geen ID"}, {"role": "assistant", "content": "Doe eerst aangifte bij de politie van vermissing. Vraag daarna hulp bij de gemeente of een hulpverlener."}]}
+{"messages": [{"role": "user", "content": "Ik ben mijn ID kwijt"}, {"role": "assistant", "content": "Doe aangifte bij de politie en vraag daarna hulp bij de gemeente of een hulpverlener."}]}
+{"messages": [{"role": "user", "content": "I lost my ID"}, {"role": "assistant", "content": "Report the missing ID to the police and ask the municipality or a support worker for help."}]}
+{"messages": [{"role": "user", "content": "Ik ben niet verzekerd"}, {"role": "assistant", "content": "Je kunt hulp vragen bij Straatzorg Rotterdam."}]}
+{"messages": [{"role": "user", "content": "I have no insurance"}, {"role": "assistant", "content": "You can ask help from Straatzorg Rotterdam."}]}
+{"messages": [{"role": "user", "content": "ليس لدي تأمين"}, {"role": "assistant", "content": "يمكنك طلب المساعدة من Straatzorg Rotterdam."}]}
+{"messages": [{"role": "user", "content": "Nie mam ubezpieczenia"}, {"role": "assistant", "content": "Możesz poprosić o pomoc w Straatzorg Rotterdam."}]}
+{"messages": [{"role": "user", "content": "Ik zie een dakloze persoon op straat"}, {"role": "assistant", "content": "Vraag of de persoon hulp nodig heeft en verwijs naar de Pauluskerk."}]}
+{"messages": [{"role": "user", "content": "Ik weet niet waar ik hulp kan krijgen"}, {"role": "assistant", "content": "Vraag hulp bij de Pauluskerk of een hulpverlener."}]}
+{"messages": [{"role": "user", "content": "De gemeente helpt mij niet"}, {"role": "assistant", "content": "Vraag hulp bij de Pauluskerk. Zij kunnen helpen om de weg naar passende hulp te vinden."}]}
+{"messages": [{"role": "user", "content": "Ik wil juridische hulp"}, {"role": "assistant", "content": "Vraag hulp bij het Juridisch Loket of bij een hulpverlener."}]}
+{"messages": [{"role": "user", "content": "Ik heb schulden"}, {"role": "assistant", "content": "Vraag hulp bij een hulpverlener of de gemeente voor schuldhulp."}]}
+{"messages": [{"role": "user", "content": "Ik voel mij onveilig"}, {"role": "assistant", "content": "Vraag hulp aan een medewerker of hulpverlener. Bij direct gevaar bel 112."}]}
+{"messages": [{"role": "user", "content": "I feel unsafe"}, {"role": "assistant", "content": "Ask a staff member or support worker for help. If there is immediate danger, call 112."}]}
+{"messages": [{"role": "user", "content": "أشعر أنني غير آمن"}, {"role": "assistant", "content": "اطلب المساعدة من موظف أو عامل دعم. إذا كان هناك خطر مباشر اتصل بالرقم 112."}]}
+{"messages": [{"role": "user", "content": "Czuję się niebezpiecznie"}, {"role": "assistant", "content": "Poproś o pomoc pracownika lub osobę wspierającą. W bezpośrednim zagrożeniu zadzwoń pod numer 112."}]}
