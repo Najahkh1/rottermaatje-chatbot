@@ -635,5 +635,35 @@
   "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16.45 uur een warme maaltijd van 1 euro.",
   "category": "voedsel",
   "keywords": ["eten", "honger", "brood", "voedsel", "gratis eten", "ik wil eten", "maaltijd"]
+},
+{
+  "question": "Ik heb geen papieren",
+  "answer": "Vraag hulp bij het Steunpunt Ongedocumenteerden van de Pauluskerk.",
+  "category": "juridisch",
+  "keywords": ["geen papieren", "papieren", "geen documenten", "documenten", "ongedocumenteerd"]
+},
+{
+  "question": "I have no insurance",
+  "answer": "You can ask Straatzorg Rotterdam for help if you need medical care and you are not insured.",
+  "category": "medical",
+  "keywords": ["no insurance", "not insured", "insurance", "doctor", "medical help"]
+},
+{
+  "question": "Ik ben niet verzekerd",
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam als je medische hulp nodig hebt en niet verzekerd bent.",
+  "category": "medisch",
+  "keywords": ["niet verzekerd", "geen verzekering", "verzekering", "huisarts", "dokter", "medische hulp"]
+},
+{
+  "question": "انا جوعان",
+  "answer": "يوجد خبز وقهوة وشاي مجاني في Pauluskerk.",
+  "category": "voedsel",
+  "keywords": ["جوعان", "اكل", "طعام", "خبز", "قهوة"]
+},
+{
+  "question": "Nie mam miejsca do spania",
+  "answer": "Możesz zgłosić się do Centraal Onthaal po pomoc z noclegiem.",
+  "category": "opvang",
+  "keywords": ["nie mam miejsca do spania", "spania", "nocleg", "bezdomny", "schronienie"]
 }
 ]
