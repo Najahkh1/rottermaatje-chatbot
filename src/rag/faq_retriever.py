@@ -10,6 +10,7 @@ class FAQRetriever:
             "paraphrase-multilingual-MiniLM-L12-v2"
         )
 
+        self.faq_data = []
         self.questions = []
         self.answers = []
         self.faq_texts = []
@@ -17,27 +18,63 @@ class FAQRetriever:
 
     def fit(self, faq_data):
 
+        self.faq_data = faq_data
+
         self.questions = [
-            item["question"]
+            item.get("question", "")
             for item in faq_data
         ]
 
         self.answers = [
-            item["answer"]
+            item.get("answer", "")
             for item in faq_data
         ]
 
-        # combine question + answer
-        self.faq_texts = [
-            f"{item['question']} {item['answer']}"
-            for item in faq_data
-        ]
+        self.faq_texts = []
+
+        for item in faq_data:
+
+            question = item.get("question", "")
+            answer = item.get("answer", "")
+            category = item.get("category", "")
+            keywords = item.get("keywords", [])
+
+            keywords_text = " ".join(keywords)
+
+            text = f"{category} {question} {keywords_text} {answer}"
+
+            self.faq_texts.append(text)
 
         self.embeddings = self.model.encode(
             self.faq_texts
         )
 
-    def retrieve(self, user_question, threshold=0.60):
+    def keyword_retrieve(self, user_question):
+
+        user_text = user_question.lower()
+
+        for item in self.faq_data:
+
+            keywords = item.get("keywords", [])
+
+            for keyword in keywords:
+
+                keyword = keyword.lower()
+
+                if keyword in user_text:
+
+                    return {
+                        "question": item.get("question"),
+                        "answer": item.get("answer"),
+                        "category": item.get("category"),
+                        "score": 1.0,
+                        "matched": True,
+                        "method": "keyword"
+                    }
+
+        return None
+
+    def semantic_retrieve(self, user_question, threshold):
 
         question_embedding = self.model.encode(
             [user_question]
@@ -59,13 +96,32 @@ class FAQRetriever:
                     "Ik weet het niet zeker op basis van de beschikbare FAQ. "
                     "Vraag hulp bij de Pauluskerk of een hulpverlener."
                 ),
+                "category": None,
                 "score": float(best_score),
-                "matched": False
+                "matched": False,
+                "method": "fallback"
             }
 
         return {
             "question": self.questions[best_index],
             "answer": self.answers[best_index],
+            "category": self.faq_data[best_index].get("category"),
             "score": float(best_score),
-            "matched": True
+            "matched": True,
+            "method": "semantic"
         }
+
+    def retrieve(self, user_question, threshold=0.60):
+
+        keyword_result = self.keyword_retrieve(
+            user_question
+        )
+
+        if keyword_result:
+
+            return keyword_result
+
+        return self.semantic_retrieve(
+            user_question,
+            threshold
+        )

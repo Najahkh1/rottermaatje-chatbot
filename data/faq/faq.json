@@ -255,5 +255,385 @@
   "question": "Waar kan ik gratis eten krijgen?",
   "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk...",
   "category": "voedsel"
+},
+{
+  "question": "Ik wil eten",
+  "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk...",
+  "category": "voedsel"
+},
+{
+  "question": "Waar kan ik douchen?",
+  "answer": "Je kunt douchen bij de Pauluskerk op Mauritsweg 20.",
+  "category": "hygiene"
+},
+
+{
+  "question": "Where can I shower?",
+  "answer": "You can shower at the Pauluskerk on Mauritsweg 20.",
+  "category": "hygiene"
+},
+{
+  "question": "أين يمكنني الاستحمام؟",
+  "answer": "يمكنك الاستحمام في Pauluskerk في Mauritsweg 20.",
+  "category": "hygiene"
+},
+{
+  "question": "Gdzie mogę wziąć prysznic?",
+  "answer": "Możesz wziąć prysznic w Pauluskerk przy Mauritsweg 20.",
+  "category": "hygiene"
+},
+
+{
+
+  "question": "Ik wil douchen",
+
+  "answer": "Je kunt douchen bij de Pauluskerk op Mauritsweg 20.",
+
+  "category": "douchen",
+
+  "keywords": [
+
+    "douchen",
+
+    "douche",
+
+    "wassen",
+
+    "ik wil douchen",
+
+    "waar kan ik douchen"
+
+  ]
+
+},
+
+{
+
+  "question": "Where can I shower?",
+
+  "answer": "You can shower at the Pauluskerk on Mauritsweg 20.",
+
+  "category": "douchen",
+
+  "keywords": [
+
+    "shower",
+
+    "where can I shower",
+
+    "I want to shower"
+
+  ]
+
+},
+
+{
+
+  "question": "أين يمكنني الاستحمام؟",
+
+  "answer": "يمكنك الاستحمام في Pauluskerk في Mauritsweg 20.",
+
+  "category": "douchen",
+
+  "keywords": [
+
+    "الاستحمام",
+
+    "أين يمكنني الاستحمام؟",
+
+    "أريد الاستحمام"
+
+  ]
+
+},
+
+{
+
+  "question": "Gdzie mogę wziąć prysznic?",
+
+  "answer": "Możesz wziąć prysznic w Pauluskerk przy Mauritsweg 20.",
+
+  "category": "douchen",
+
+  "keywords": [
+
+    "prysznic",
+
+    "gdzie mogę wziąć prysznic?",
+
+    "chcę się umyć"
+
+  ]
+
+},
+{
+
+  "question": "Ik heb geen ID",
+
+  "answer": "Vraag hulp bij de Pauluskerk of het Juridisch Loket als u geen identiteitsbewijs heeft.",
+
+  "category": "identiteit",
+
+  "keywords": [
+
+    "id",
+
+    "paspoort",
+
+    "identiteitskaart",
+
+    "geen id",
+
+    "documenten kwijt"
+
+  ]
+
+},
+{
+
+  "question": "Ik heb geen plek om te slapen",
+
+  "answer": "Je kunt je melden bij Centraal Onthaal voor hulp bij opvang.",
+
+  "category": "opvang",
+
+  "keywords": [
+
+    "slapen",
+
+    "opvang",
+
+    "dakloos",
+
+    "geen plek",
+
+    "geen slaapplaats"
+
+  ]
+
+},
+{
+
+  "question": "Ik ben niet verzekerd",
+
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam.",
+
+  "category": "medisch",
+
+  "keywords": [
+
+    "verzekering",
+
+    "niet verzekerd",
+
+    "zorgverzekering",
+
+    "dokter",
+
+    "huisarts"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik heb geen geld",
+
+  "answer": "Je kunt hulp vragen bij de Pauluskerk voor eten, kleding en andere basisbehoeften.",
+
+  "category": "financieel",
+
+  "keywords": [
+
+    "geld",
+
+    "geen geld",
+
+    "financiële hulp",
+
+    "armoede"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik ben verslaafd",
+
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam voor verslavingszorg.",
+
+  "category": "verslaving",
+
+  "keywords": [
+
+    "verslaafd",
+
+    "drugs",
+
+    "alcohol",
+
+    "afkicken"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik heb juridische hulp nodig",
+
+  "answer": "Je kunt gratis juridisch advies krijgen bij het Juridisch Loket.",
+
+  "category": "juridisch",
+
+  "keywords": [
+
+    "juridische hulp",
+
+    "juridisch advies",
+
+    "juridisch loket",
+
+    "rechtshulp"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik zoek een baan",
+
+  "answer": "Je kunt hulp vragen bij Stichting Barka of Stichting Ontmoeting voor ondersteuning bij het vinden van werk.",
+
+  "category": "werk",
+
+  "keywords": [
+
+    "baan",
+
+    "werk",
+
+    "werk zoeken",
+
+    "uitzendbureau"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik heb een postadres nodig",
+
+  "answer": "Je kunt een postadres aanvragen bij de gemeente Rotterdam via Centraal Onthaal.",
+
+  "category": "postadres",
+
+  "keywords": [
+
+    "postadres",
+
+    "postbus",
+
+    "adres",
+
+    "geen adres"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik heb hulp nodig bij het aanvragen van een postadres",
+
+  "answer": "Je kunt hulp vragen bij de Pauluskerk voor het aanvragen van een postadres.",
+
+  "category": "postadres",
+
+  "keywords": [
+
+    "hulp postadres",
+
+    "postadres aanvragen",
+
+    "hulp aanvraag postadres"
+
+  ]
+
+},
+
+{
+
+  "question": "Ik ben dakloos en zoek een huis",
+
+  "answer": "Je kunt je inschrijven bij Woonnet Rijnmond of andere sociale woningcorporaties. De wachttijd is enkele jaren voor 55+ . Voor andere is de wachttijd gemiddeld 9 jaar. Je kunt ook particulier zoeken naar een woning of kamer. Vraag familie, vrienden of collega’s om een kamer.",
+
+  "category": "huisvesting",
+
+  "keywords": [
+
+    "dakloos",
+
+    "huis",
+
+    "woning",
+
+    "kamer",
+
+    "huisvesting"
+
+  ]
+
+},
+{
+
+  "question": "Ik wil afkicken",
+
+  "answer": "Vraag hulp aan een huisarts of Straatzorg Rotterdam.",
+
+  "category": "drugs",
+
+  "keywords": [
+
+    "afkicken",
+
+    "verslaafd",
+
+    "drugs",
+
+    "detox",
+
+    "stoppen met drugs"
+
+  ]
+
+},
+{
+  "question": "Ik heb geen geld waar kan ik eten",
+  "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16.45 uur een warme maaltijd van 1 euro.",
+  "category": "voedsel",
+  "keywords": ["eten", "honger", "brood", "voedsel", "gratis eten", "ik wil eten", "maaltijd"]
+},
+{
+  "question": "Ik heb honger",
+  "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16.45 uur een warme maaltijd van 1 euro.",
+  "category": "voedsel",
+  "keywords": ["eten", "honger", "brood", "voedsel", "gratis eten", "ik wil eten", "maaltijd"]
+},
+{
+  "question": "Waar kan ik gratis eten krijgen?",
+  "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16.45 uur een warme maaltijd van 1 euro.",
+  "category": "voedsel",
+  "keywords": ["eten", "honger", "brood", "voedsel", "gratis eten", "ik wil eten", "maaltijd"]
+},
+{
+  "question": "Ik wil eten",
+  "answer": "Er is de hele dag gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16.45 uur een warme maaltijd van 1 euro.",
+  "category": "voedsel",
+  "keywords": ["eten", "honger", "brood", "voedsel", "gratis eten", "ik wil eten", "maaltijd"]
 }
 ]
