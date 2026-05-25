@@ -565,7 +565,16 @@
   ]
 
 },
-
+{
+  "question": "ik help iemand zonder slaapplaats",
+  "answer": "Je kunt je melden bij Centraal Onthaal voor hulp bij opvang.",
+  "category": "opvang",
+  "keywords": [
+    "geen slaapplaats",
+    "dakloze opvang",
+    "persoon zoekt opvang"
+  ]
+},
 {
 
   "question": "Ik ben dakloos en zoek een huis",
@@ -665,5 +674,311 @@
   "answer": "Możesz zgłosić się do Centraal Onthaal po pomoc z noclegiem.",
   "category": "opvang",
   "keywords": ["nie mam miejsca do spania", "spania", "nocleg", "bezdomny", "schronienie"]
+},
+{
+  "question": "Ik help iemand die honger heeft",
+  "answer": "Er is gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16:45 uur een warme maaltijd voor €1.",
+  "category": "voedsel",
+  "keywords": [
+    "iemand heeft honger",
+    "cliënt heeft honger",
+    "dakloze heeft honger",
+    "vrijwilliger eten",
+    "persoon zoekt eten"
+  ]
+},
+{
+  "question": "Ik help iemand zonder slaapplaats",
+  "answer": "Je kunt iemand verwijzen naar Centraal Onthaal voor hulp bij opvang.",
+  "category": "opvang",
+  "keywords": [
+    "geen slaapplaats",
+    "dakloze opvang",
+    "cliënt zoekt opvang",
+    "persoon heeft geen plek om te slapen"
+  ]
+},
+{
+  "question": "Ik help iemand zonder ID",
+  "answer": "Vraag hulp bij de Pauluskerk of het Juridisch Loket voor ondersteuning bij identiteitsdocumenten.",
+  "category": "identiteit",
+  "keywords": [
+    "geen id",
+    "geen paspoort",
+    "documenten kwijt",
+    "cliënt zonder documenten"
+  ]
+},
+{
+  "question": "Ik help iemand zonder papieren",
+  "answer": "Het Steunpunt Ongedocumenteerden van de Pauluskerk kan hulp bieden.",
+  "category": "ongedocumenteerd",
+  "keywords": [
+    "zonder papieren",
+    "ongedocumenteerd",
+    "geen verblijfsdocumenten",
+    "cliënt zonder papieren"
+  ]
+},
+{
+  "question": "Ik help iemand die wil douchen",
+  "answer": "Je kunt iemand verwijzen naar de Pauluskerk op Mauritsweg 20 voor douchemogelijkheden.",
+  "category": "hygiëne",
+  "keywords": [
+    "douchen",
+    "wassen",
+    "cliënt wil douchen",
+    "persoon zoekt douche"
+  ]
+},
+{
+  "question": "Ik help iemand zonder verzekering",
+  "answer": "Straatzorg Rotterdam kan medische hulp bieden aan mensen zonder verzekering.",
+  "category": "medisch",
+  "keywords": [
+    "geen verzekering",
+    "onverzekerd",
+    "cliënt zonder verzekering",
+    "medische hulp"
+  ]
+},
+{
+  "question": "Ik help iemand die verslaafd is",
+  "answer": "Straatzorg Rotterdam kan ondersteuning bieden bij verslavingszorg en afkickhulp.",
+  "category": "verslaving",
+  "keywords": [
+    "verslaafd",
+    "drugs",
+    "alcohol",
+    "cliënt verslaafd",
+    "afkickhulp"
+  ]
+},
+{
+  "question": "Ik help iemand die juridische hulp nodig heeft",
+  "answer": "Je kunt iemand verwijzen naar het Juridisch Loket voor gratis juridisch advies.",
+  "category": "juridisch",
+  "keywords": [
+    "juridische hulp",
+    "rechtshulp",
+    "juridisch loket",
+    "cliënt juridische hulp"
+  ]
+},
+{
+  "question": "Ik help iemand die werk zoekt",
+  "answer": "Stichting Barka en Stichting Ontmoeting kunnen ondersteuning bieden bij het zoeken naar werk.",
+  "category": "werk",
+  "keywords": [
+    "werk zoeken",
+    "baan zoeken",
+    "uitzendbureau",
+    "cliënt zoekt werk"
+  ]
+},
+{
+  "question": "Ik help iemand met een postadres",
+  "answer": "Een postadres kan worden aangevraagd via de gemeente Rotterdam of Centraal Onthaal.",
+  "category": "postadres",
+  "keywords": [
+    "postadres",
+    "geen adres",
+    "cliënt postadres",
+    "adres aanvragen"
+  ]
+},
+{
+  "question": "Ik help iemand die uit huis wordt gezet",
+  "answer": "Vraag zo snel mogelijk hulp aan maatschappelijk werk of Huis van de Wijk.",
+  "category": "huisvesting",
+  "keywords": [
+    "uit huis gezet",
+    "woning kwijt",
+    "huisuitzetting",
+    "cliënt woningprobleem"
+  ]
+},
+{
+  "question": "Ik help iemand die medische hulp nodig heeft",
+  "answer": "Straatzorg Rotterdam kan medische ondersteuning bieden aan kwetsbare personen.",
+  "category": "medisch",
+  "keywords": [
+    "medische hulp",
+    "dokter",
+    "ziek",
+    "cliënt medische hulp"
+  ]
+},
+{
+  "question": "Ik help iemand die asiel wil aanvragen",
+  "answer": "Je kunt iemand verwijzen naar een politiebureau voor een reisdocument naar Ter Apel.",
+  "category": "asiel",
+  "keywords": [
+    "asiel",
+    "vluchteling",
+    "ter apel",
+    "cliënt asiel"
+  ]
+},
+{
+  "question": "Ik help iemand die geen geld heeft",
+  "answer": "De Pauluskerk kan ondersteuning bieden met basisbehoeften zoals eten en hulpverlening.",
+  "category": "financieel",
+  "keywords": [
+    "geen geld",
+    "armoede",
+    "financiële hulp",
+    "cliënt zonder geld"
+  ]
+},
+{
+  "question": "Ik help iemand die honger heeft",
+  "answer": "Er is gratis brood, koffie en thee in de Pauluskerk. Van maandag tot vrijdag is er om 16:45 uur een warme maaltijd voor €1.",
+  "category": "voedsel",
+  "keywords": [
+    "iemand heeft honger",
+    "dakloze honger",
+    "cliënt honger",
+    "persoon zoekt eten",
+    "dakloze die honger heeft"
+  ]
+},
+{
+  "question": "ik help iemand zonder papieren",
+  "answer": "Vraag hulp bij het Steunpunt Ongedocumenteerden van de Pauluskerk.",
+  "category": "ongedocumenteerd",
+  "keywords": [
+    "zonder papieren",
+    "ongedocumenteerd",
+    "geen documenten"
+  ]
+},
+{
+  "question": "Ik help iemand die verslaafd is",
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam voor ondersteuning bij verslaving en afkickzorg.",
+  "category": "verslaving",
+  "keywords": [
+    "iemand verslaafd",
+    "cliënt verslaafd",
+    "persoon gebruikt drugs",
+    "alcoholprobleem",
+    "dakloze verslaafd",
+    "iemand wil afkicken",
+    "persoon drugsprobleem",
+    "verslavingszorg"
+  ]
+},
+{
+  "question": "Ik help iemand die wil afkicken",
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam of een huisarts voor hulp bij afkicken.",
+  "category": "verslaving",
+  "keywords": [
+    "afkicken",
+    "stoppen met drugs",
+    "detox",
+    "iemand wil stoppen",
+    "cliënt wil afkicken"
+  ]
+},
+{
+  "question": "Ik help iemand met een alcoholverslaving",
+  "answer": "Straatzorg Rotterdam kan ondersteuning bieden bij alcoholverslaving en hulpverlening.",
+  "category": "verslaving",
+  "keywords": [
+    "alcoholverslaving",
+    "alcohol probleem",
+    "persoon drinkt veel",
+    "cliënt alcohol"
+  ]
+},
+{
+  "question": "Ik help iemand die medische hulp nodig heeft",
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam voor medische ondersteuning.",
+  "category": "medisch",
+  "keywords": [
+    "medische hulp",
+    "persoon ziek",
+    "cliënt medische hulp",
+    "dokter nodig",
+    "hulpverlener medisch"
+  ]
+},
+{
+  "question": "Ik help iemand zonder zorgverzekering",
+  "answer": "Straatzorg Rotterdam kan medische hulp bieden aan mensen zonder verzekering.",
+  "category": "medisch",
+  "keywords": [
+    "geen verzekering",
+    "onverzekerd",
+    "zorgverzekering",
+    "persoon zonder verzekering",
+    "cliënt onverzekerd"
+  ]
+},
+{
+  "question": "Ik help iemand die ziek is",
+  "answer": "Je kunt medische hulp vragen bij Straatzorg Rotterdam.",
+  "category": "medisch",
+  "keywords": [
+    "ziek",
+    "persoon ziek",
+    "medische zorg",
+    "dokter",
+    "hulp nodig"
+  ]
+},
+{
+  "question": "Ik help iemand met psychische problemen",
+  "answer": "Vraag hulp bij een hulpverlener, huisarts of Straatzorg Rotterdam voor ondersteuning.",
+  "category": "psychisch",
+  "keywords": [
+    "psychische problemen",
+    "mentale hulp",
+    "verward",
+    "psychisch",
+    "cliënt mentale hulp"
+  ]
+},
+{
+  "question": "Ik help iemand met pijnklachten",
+  "answer": "Bij medische klachten kun je hulp vragen bij Straatzorg Rotterdam of een huisarts.",
+  "category": "medisch",
+  "keywords": [
+    "pijn",
+    "pijnklachten",
+    "medische klachten",
+    "persoon heeft pijn"
+  ]
+},
+{
+  "question": "Een dakloze is niet verzekerd",
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam als je medische hulp nodig hebt en niet verzekerd bent.",
+  "category": "medisch",
+  "keywords": [
+    "een dakloze is niet verzekerd",
+    "dakloze niet verzekerd",
+    "niet verzekerd",
+    "geen verzekering",
+    "onverzekerd",
+    "zorgverzekering",
+    "straatdokter",
+    "straatzorg"
+  ]
+},
+{
+  "question": "Ik help iemand die medische hulp nodig heeft",
+  "answer": "Je kunt hulp vragen bij Straatzorg Rotterdam voor medische ondersteuning. Bij direct gevaar of spoed: bel 112.",
+  "category": "medisch",
+  "keywords": [
+    "ik help iemand die medische hulp nodig heeft",
+    "iemand medische hulp",
+    "cliënt medische hulp",
+    "client medische hulp",
+    "persoon medische hulp",
+    "dakloze medische hulp",
+    "dokter nodig",
+    "medische ondersteuning",
+    "straatzorg"
+  ]
 }
 ]

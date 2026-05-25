@@ -1,7 +1,36 @@
+def is_helper_context(text):
+    text_lower = text.lower()
+
+    helper_words = [
+        "ik help iemand",
+        "ik help een",
+        "ik begeleid iemand",
+        "ik ondersteun iemand",
+        "er is iemand",
+        "er is een dakloze",
+        "een dakloze",
+        "een cliënt",
+        "een client",
+        "een persoon",
+        "iemand heeft",
+        "iemand is",
+        "dakloze is",
+        "dakloze heeft",
+        "cliënt heeft",
+        "client heeft",
+        "persoon heeft"
+    ]
+
+    return any(word in text_lower for word in helper_words)
+
+
 def detect_language(text):
     text_lower = text.lower()
 
-    arabic_chars = any("\u0600" <= char <= "\u06FF" for char in text)
+    arabic_chars = any(
+        "\u0600" <= char <= "\u06FF"
+        for char in text
+    )
 
     polish_chars = any(
         char in text_lower
@@ -9,8 +38,18 @@ def detect_language(text):
     )
 
     english_words = [
-        "where", "what", "how", "help", "sleep",
-        "shower", "hungry", "food", "documents"
+        "where",
+        "what",
+        "how",
+        "help",
+        "sleep",
+        "shower",
+        "hungry",
+        "food",
+        "documents",
+        "insurance",
+        "medical",
+        "doctor"
     ]
 
     if arabic_chars:
@@ -19,7 +58,10 @@ def detect_language(text):
     if polish_chars:
         return "Pools"
 
-    english_count = sum(word in text_lower for word in english_words)
+    english_count = sum(
+        word in text_lower
+        for word in english_words
+    )
 
     if english_count >= 2:
         return "Engels"
@@ -29,6 +71,9 @@ def detect_language(text):
 
 def is_medical_complaint(text):
     text_lower = text.lower()
+
+    if is_helper_context(text):
+        return False
 
     medical_words = [
         "pijn",
@@ -42,7 +87,6 @@ def is_medical_complaint(text):
         "adem",
         "ziek",
         "hoofdpijn",
-        "medisch",
 
         "الم",
         "وجع",
@@ -52,7 +96,10 @@ def is_medical_complaint(text):
         "تنفس"
     ]
 
-    return any(word in text_lower for word in medical_words)
+    return any(
+        word in text_lower
+        for word in medical_words
+    )
 
 
 def is_medical_care_question(text):
@@ -63,27 +110,44 @@ def is_medical_care_question(text):
         "dokter",
         "arts",
         "medische hulp",
+        "medische zorg",
         "niet verzekerd",
+        "geen verzekering",
+        "onverzekerd",
         "verzekering",
         "zorg",
         "straatzorg",
+
+        "doctor",
+        "medical help",
+        "medical care",
+        "insurance",
+        "not insured",
 
         "طبيب",
         "تأمين",
         "مساعدة طبية"
     ]
 
-    return any(word in text_lower for word in care_words)
+    return any(
+        word in text_lower
+        for word in care_words
+    )
 
 
 def is_drug_question(text):
     text_lower = text.lower()
 
+    if is_helper_context(text):
+        return False
+
     drug_words = [
         "drugs",
         "cocaine",
+        "cocaïne",
         "wiet",
         "heroine",
+        "heroïne",
         "verslaafd",
         "afkicken",
         "meth",
@@ -94,7 +158,10 @@ def is_drug_question(text):
         "حشيش"
     ]
 
-    return any(word in text_lower for word in drug_words)
+    return any(
+        word in text_lower
+        for word in drug_words
+    )
 
 
 def get_medical_safety_response(language="Nederlands"):
@@ -122,8 +189,8 @@ def get_medical_safety_response(language="Nederlands"):
 def get_drug_safety_response(language="Nederlands"):
     if language == "Arabisch":
         return (
-            "لا أستطيع تقديم advies over drugsgebruik. "
-            "اطلب المساعدة من أحد العاملين أو من hulpverlener."
+            "لا أستطيع تقديم نصيحة حول استخدام المخدرات. "
+            "اطلب المساعدة من أحد العاملين أو من مقدم رعاية."
         )
 
     if language == "Engels":

@@ -5,6 +5,7 @@ from rag.faq_loader import FAQLoader
 from rag.faq_retriever import FAQRetriever
 
 from safety.safety_rules import (
+    is_helper_context,
     detect_language,
     is_medical_complaint,
     is_medical_care_question,
@@ -33,34 +34,30 @@ class ChatbotService:
             api_key=api_key
         )
 
-        # FAQ laden
         loader = FAQLoader(faq_path)
 
         self.faq_data = loader.load_faq()
 
-        # Web bronnen laden
         try:
 
             with open(web_path, "r", encoding="utf-8") as file:
-
                 web_data = json.load(file)
 
             for item in web_data:
 
                 self.faq_data.append({
-                    "question": item["question"],
-                    "answer": item["answer"]
+                    "question": item.get("question", ""),
+                    "answer": item.get("answer", ""),
+                    "category": item.get("category", "web")
                 })
 
         except Exception:
             print("Geen web_sources.json gevonden.")
 
-        # Retriever maken
         self.retriever = FAQRetriever()
 
         self.retriever.fit(self.faq_data)
 
-        # System prompt
         self.system_prompt = """
 Je bent RotterMaatje.
 
@@ -83,13 +80,23 @@ Regels:
         for item in self.faq_data:
 
             question = item.get("question", "").lower()
+            answer = item.get("answer", "").lower()
+            category = item.get("category", "").lower()
 
             if (
+                "medisch" in category
+                or
                 "huisarts" in question
                 or
                 "niet verzekerd" in question
                 or
+                "geen verzekering" in question
+                or
+                "onverzekerd" in question
+                or
                 "medische hulp" in question
+                or
+                "straatzorg" in answer
             ):
 
                 return item.get("answer", "")
@@ -124,38 +131,44 @@ Verzin geen extra informatie.
 Geef een kort, veilig en duidelijk antwoord.
 """
 
+    def get_context_from_faq(self, user_question, user_language):
+
+        result = self.retriever.retrieve(
+            user_question
+        )
+
+        if result["matched"]:
+
+            return result["answer"]
+
+        return get_fallback_response(
+            user_language
+        )
+
     def generate_answer(self, user_question):
 
         user_language = detect_language(
             user_question
         )
 
-        # medische klachten
-        if is_medical_complaint(
+        # 1. Helper-context eerst via FAQ laten lopen
+        # Voorbeelden:
+        # - ik help iemand die medische hulp nodig heeft
+        # - een dakloze is niet verzekerd
+        # - ik help iemand die verslaafd is
+        if is_helper_context(
             user_question
         ):
 
-            return get_medical_safety_response(
-                user_language
+            result = self.retriever.retrieve(
+                user_question
             )
 
-        # drugs
-        if is_drug_question(
-            user_question
-        ):
+            if result["matched"]:
 
-            return get_drug_safety_response(
-                user_language
-            )
+                context = result["answer"]
 
-        # medische zorgvragen
-        if is_medical_care_question(
-            user_question
-        ):
-
-            context = self.get_medical_care_context()
-
-            if not context:
+            else:
 
                 return get_fallback_response(
                     user_language
@@ -163,19 +176,66 @@ Geef een kort, veilig en duidelijk antwoord.
 
         else:
 
-            result = self.retriever.retrieve(
+            # 2. Directe medische klachten blijven safety-first
+            # Voorbeeld: ik heb pijn op mijn borst
+            if is_medical_complaint(
                 user_question
-            )
+            ):
 
-            context = result["answer"]
-
-            if not result["matched"]:
-
-                return get_fallback_response(
+                return get_medical_safety_response(
                     user_language
                 )
 
-        # model response
+            # 3. Directe drugsgebruik-vragen blijven safety-first
+            # Voorbeeld: ik wil drugs gebruiken
+            if is_drug_question(
+                user_question
+            ):
+
+                return get_drug_safety_response(
+                    user_language
+                )
+
+            # 4. Medische zorgvragen mogen FAQ-context gebruiken
+            # Voorbeeld: ik ben niet verzekerd
+            if is_medical_care_question(
+                user_question
+            ):
+
+                result = self.retriever.retrieve(
+                    user_question
+                )
+
+                if result["matched"]:
+
+                    context = result["answer"]
+
+                else:
+
+                    context = self.get_medical_care_context()
+
+                    if not context:
+
+                        return get_fallback_response(
+                            user_language
+                        )
+
+            else:
+
+                result = self.retriever.retrieve(
+                    user_question
+                )
+
+                if result["matched"]:
+
+                    context = result["answer"]
+
+                else:
+
+                    return get_fallback_response(
+                        user_language
+                    )
+
         response = self.client.chat.completions.create(
             model=self.model_name,
 
