@@ -3,6 +3,7 @@ import json
 
 from rag.faq_loader import FAQLoader
 from rag.faq_retriever import FAQRetriever
+from evaluation.rl_strategy_selector import RLStrategySelector
 
 from safety.safety_rules import (
     is_helper_context,
@@ -28,6 +29,7 @@ class ChatbotService:
     ):
 
         self.model_name = model_name
+        self.rl_selector = RLStrategySelector()
 
         self.client = OpenAI(
             base_url=base_url,
@@ -150,7 +152,10 @@ Geef een kort, veilig en duidelijk antwoord.
         user_language = detect_language(
             user_question
         )
-
+        strategy = self.rl_selector.select_action(user_question)
+        selected_action = strategy["action"]
+        print("\nRL strategy:")
+        print(strategy)
         # 1. Helper-context eerst via FAQ laten lopen
         # Voorbeelden:
         # - ik help iemand die medische hulp nodig heeft
