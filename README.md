@@ -23,23 +23,75 @@ Het doel van RotterMaatje is:
 # Doelgroep
 De chatbot richt zich op:
 - dak- en thuisloze personen
-- EU-arbeidsmigranten
 - mensen zonder papieren
 - vrijwilligers
 - hulpverleners
 - maatschappelijke organisaties
 ---
-# Gebruikte AI-technieken
-## Gebruikte technieken
-| Techniek | Toepassing |
+# Gebruikte modellen
+
+Tijdens het project zijn meerdere Large Language Models (LLMs) gebruikt, getest en vergeleken.
+
+## Geteste modellen
+
+| Model | Gebruik binnen project |
+
 |---|---|
-| RAG | FAQ retrieval |
-| Semantic Search | Similarity matching |
-| Keyword Retrieval | Keyword matching |
-| Sentence Transformers | Embeddings |
-| Fine-tuning (SFT/LoRA) | Experimenteel |
-| Safety Rules | Veilige antwoorden |
-| Streamlit | Gebruikersinterface |
+
+| Qwen 3 4B Instruct | Eindmodel voor chatbot |
+
+| Gemma 3 4B IT | Vergelijkingsmodel tijdens evaluaties |
+
+## Waarom meerdere modellen?
+
+De modellen zijn getest op:
+
+- stabiliteit
+
+- retrieval prestaties
+
+- multilingual ondersteuning
+
+- hallucinations
+
+- safety gedrag
+
+- consistentie van antwoorden
+
+##  Waarom Qwen als eindmodel?
+
+Qwen gaf tijdens de experimenten:
+
+- stabielere antwoorden
+
+- betere retrieval resultaten
+
+- minder hallucinations
+
+- betere helper-context ondersteuning
+
+- consistentere multilingual antwoorden
+
+Daardoor werd Qwen gekozen als uiteindelijke chatbotmodel.
+
+---
+
+
+# Gebruikte AI-technieken
+
+## Gebruikte technieken
+
+| Techniek | Toepassing binnen RotterMaatje |
+|---|---|
+| RAG | Antwoorden ophalen uit de FAQ-dataset |
+| Semantic Search | Vergelijkbare vragen herkennen |
+| Keyword Retrieval | Belangrijke woorden herkennen zoals “honger” of “opvang” |
+| Rule-based Logic | Safety rules, helper-context en fallback logica |
+| Sentence Transformers | Tekst omzetten naar embeddings voor similarity matching |
+| Fine-tuning (SFT/LoRA) | Experimenteren met eigen getrainde modellen |
+| Safety Rules | Onveilige of medische antwoorden blokkeren |
+| Language Detection | Herkennen van Nederlands, Engels, Arabisch en Pools |
+| Streamlit | Frontend en chat-interface bouwen |
 
 # Architectuur van het systeem
 ## Pipeline
@@ -79,8 +131,6 @@ Veilig antwoord terug
 
 | Ik heb honger | Gratis brood in de Pauluskerk |
 
-| Where can I shower? | You can shower at the Pauluskerk |
-
 | انا جوعان | يوجد خبز مجاني |
 
 | Nie mam miejsca do spania | Hulp via Centraal Onthaal |
@@ -89,33 +139,38 @@ Veilig antwoord terug
 
 # Safety Rules
 
-Omdat het project werkt met kwetsbare doelgroepen zijn safety rules toegevoegd.
+Omdat RotterMaatje werkt met kwetsbare doelgroepen zijn safety rules toegevoegd om veiligere antwoorden te genereren.
 
 De chatbot:
 
-- geeft geen medisch advies
-
-- geeft geen drugsadvies
-
+- geeft geen direct medisch advies
+- geeft geen advies over drugsgebruik
 - verwijst bij spoed naar 112
+- verwijst gebruikers naar hulpverleners
+- gebruikt fallback antwoorden bij onduidelijke vragen
+- herkent helper-context van vrijwilligers en hulpverleners
+- probeert hallucinerende antwoorden te beperken
+- gebruikt alleen informatie uit de FAQ-context
 
-- verwijst naar hulpverleners
+## Safety technieken
 
-- voorkomt hallucinerende antwoorden
+| Techniek | Toepassing |
+|---|---|
+| Medical Safety | Medische diagnoses blokkeren |
+| Drug Safety | Drugsadvies blokkeren |
+| Fallback Responses | Veilig antwoord geven bij onbekende vragen |
+| Helper-context detectie | Vrijwilliger-vragen herkennen |
+| Rule-based filtering | Risicovolle vragen detecteren |
 
 ## Voorbeelden
 
 | Vraag | Veilig antwoord |
-
 |---|---|
-
 | Ik wil drugs gebruiken | Vraag hulp aan een hulpverlener |
-
 | Ik heb pijn op mijn borst | Bel 112 bij spoed |
-
 | Ik wil afkicken | Vraag hulp bij Straatzorg |
-
----
+| Ik help iemand die medische hulp nodig heeft | Vraag hulp bij Straatzorg Rotterdam |
+| Een dakloze is niet verzekerd | Vraag hulp bij Straatzorg Rotterdam |
 
 # Dataset en FAQ
 
@@ -147,17 +202,77 @@ De FAQ-dataset bestaat uit maatschappelijke vragen en antwoorden gebaseerd op:
 
 # Experimenten
 
-## Experiment 1 Fine-tuning
+## Experiment 1 Eerste FAQ retrieval
 
-Een SFT/LoRA model werd getraind op een kleine dataset.
+### Doel
 
-### Resultaat
+Controleren of semantic retrieval basisvragen correct kon herkennen.
 
-- hallucinerende antwoorden
+### Getest
 
-- inconsistente antwoorden
+- eenvoudige FAQ-vragen
+- similarity matching
+- eerste retrieval thresholds
 
-- beperkte stabiliteit
+### Problemen
+
+- veel fallback antwoorden
+- korte vragen werkten slecht
+- vragen zoals “ik wil eten” werden soms niet herkend
+
+### Verbeteringen
+
+- extra FAQ-variaties toegevoegd
+- keywords toegevoegd
+- semantic retrieval verbeterd
+
+### Conclusie
+
+Semantic retrieval werkte beter na uitbreiding van de FAQ-dataset en keyword matching.
+
+---
+
+# Experiment 2 Threshold evaluatie
+
+### Doel
+
+Testen welke similarity threshold betere retrieval prestaties gaf.
+
+### Geteste thresholds
+
+- 0.75
+- 0.60
+
+## Resultaten
+
+| Threshold | Observatie |
+|---|---|
+| 0.75 | teveel fallback antwoorden |
+| 0.60 | betere FAQ matches |
+
+### Conclusie
+
+Threshold 0.60 gaf betere retrieval prestaties.
+
+---
+
+# Experiment 3 Fine-tuning (SFT/LoRA)
+
+### Doel
+
+Onderzoeken of een fine-tuned model betere antwoorden kon genereren.
+
+### Getest
+
+- kleine SFT dataset
+- Gemma/Qwen fine-tuning
+- LoRA training
+
+### Resultaten
+
+- train loss verbeterde
+- antwoorden bleven soms hallucineren
+- modellen waren minder stabiel dan retrieval
 
 ### Conclusie
 
@@ -165,47 +280,127 @@ Fine-tuning alleen was onvoldoende betrouwbaar voor maatschappelijke ondersteuni
 
 ---
 
-# Experiment 2 Threshold evaluatie
+# Experiment 4 Vergelijking van modellen
 
-Verschillende retrieval thresholds werden getest.
+### Geteste modellen
 
-| Threshold | Resultaat |
+- Gemma
+- Qwen
 
-|---|---|
+### Evaluatiepunten
 
-| 0.75 | teveel fallback antwoorden |
+- stabiliteit
+- multilingual antwoorden
+- FAQ retrieval
+- safety gedrag
+- hallucinations
 
-| 0.60 | betere retrieval prestaties |
-
-### Conclusie
-
-Threshold 0.60 gaf betere resultaten.
-
----
-
-# Experiment 3 Vergelijking van modellen
-
-De volgende modellen zijn getest:
+## Resultaten
 
 | Model | Observatie |
-
 |---|---|
-
 | Gemma | redelijk stabiel |
-
 | Qwen | meest consistente antwoorden |
 
-### Eindkeuze
+### Conclusie
 
 Qwen werd gekozen als eindmodel.
 
 ---
 
-# Evaluatie
+# Experiment 5 — Multilingual testing
+
+### Geteste talen
+
+- Nederlands
+- Engels
+- Arabisch
+- Pools
+
+### Getest
+
+- retrieval
+- safety antwoorden
+- FAQ matching
+
+### Resultaten
+
+- Nederlands werkte het beste
+- Engels werkte stabiel
+- Arabisch en Pools werkten redelijk goed
+- sommige vertalingen bleven beperkt
+
+### Conclusie
+
+De chatbot ondersteunt meerdere talen, maar Nederlandse retrieval bleef het sterkst.
+
+---
+
+#  Experiment 6 Safety testing
+
+### Doel
+
+Controleren of onveilige vragen veilig werden afgehandeld.
+
+### Getest
+
+- medische vragen
+- drugsgerelateerde vragen
+- spoedvragen
+
+### Voorbeelden
+
+- “ik wil drugs gebruiken”
+- “ik heb pijn op mijn borst”
+
+### Resultaten
+
+- safety responses werkten stabiel
+- 112-verwijzingen werkten correct
+- hallucinations werden verminderd
+
+### Conclusie
+
+Safety rules verbeterden de betrouwbaarheid van de chatbot.
+
+---
+
+# Experiment 7 Vrijwilliger / helper-context experiment
+
+### Doel
+
+Onderzoeken of vrijwilliger-vragen correct werden herkend.
+
+### Testvragen
+
+- “ik help iemand die honger heeft”
+- “een cliënt zoekt opvang”
+- “een dakloze is niet verzekerd”
+
+### Problemen
+
+- safety rules blokkeerden te veel vragen
+- retrieval werkte vooral op directe “ik”-vragen
+
+### Verbeteringen
+
+- helper-context detectie toegevoegd
+- rule-based filtering aangepast
+- FAQ uitgebreid met vrijwilliger-variaties
+
+### Resultaten
+
+Vrijwilliger-vragen werden correct ondersteund.
+
+### Conclusie
+
+De chatbot ondersteunt nu meerdere doelgroepen en begrijpt ook vragen van vrijwilligers en hulpverleners.
+
+## Evaluatie
 
 De chatbot werd getest op:
 
-- correcte antwoorden
+- correcte FAQ-antwoorden
 
 - hallucinations
 
@@ -215,25 +410,72 @@ De chatbot werd getest op:
 
 - retrieval kwaliteit
 
+- vrijwilliger-vragen
+
+- helper-context detectie
+
+- fallback responses
+
+## Geteste scenario’s
+
+| Testtype | Voorbeelden |
+
+|---|---|
+
+| FAQ retrieval | “ik wil eten” |
+| Safety testing | “ik wil drugs gebruiken” |
+| Medische vragen | “ik heb pijn op mijn borst” |
+| Multilingual testing | Engels, Arabisch en Pools |
+| Vrijwilliger-vragen | “ik help iemand die honger heeft” |
+| Helper-context | “een cliënt zoekt opvang” |
+
 ## Sterke punten
 
 - goede FAQ retrieval
 
 - stabiele safety antwoorden
 
+- ondersteuning voor meerdere talen
+
+- helper-context detectie voor vrijwilligers
+
+- duidelijke fallback responses
+
 - eenvoudige gebruikersinterface
 
-- meertalige ondersteuning
+- lage hallucination kans door FAQ-context
+
+- reproduceerbare pipeline
 
 ## Zwakke punten
 
-- kleine dataset
+- relatief kleine dataset
 
-- sommige talen minder sterk
+- sommige talen werken minder sterk
 
 - afhankelijk van FAQ kwaliteit
 
-- geen live koppeling met gemeentelijke systemen
+- beperkte real-time informatie
+
+- geen productieomgeving
+
+- sommige complexe vragen blijven moeilijk
+
+## Belangrijkste conclusie
+
+De combinatie van:
+
+- RAG
+
+- semantic retrieval
+
+- keyword retrieval
+
+- helper-context detectie
+
+- safety rules
+
+gaf de meest stabiele en veilige resultaten voor maatschappelijke ondersteuning.
 
 ---
 
@@ -366,11 +608,9 @@ Toekomstig werk
 Mogelijke uitbreidingen:
 
 * grotere knowledge base
-* live gemeentelijke koppelingen
 * voice input
-* mobiele applicatie
 * uitgebreidere evaluatie datasets
-* betere Arabische ondersteuning
+* betere meertaligheid ondersteuning
 
 ⸻
 
@@ -381,7 +621,6 @@ Omdat het project werkt met kwetsbare groepen is extra aandacht besteed aan:
 * veiligheid
 * transparantie
 * betrouwbaarheid
-* privacy
 * beperking van hallucinations
 * duidelijke doorverwijzingen
 
@@ -416,12 +655,97 @@ Ontwikkeld met
 
 ⸻
 
-Bronnen
 
-* Pauluskerk Rotterdam
-* Straatzorg Rotterdam
-* Hugging Face
-* Sentence Transformers documentatie
-* Streamlit documentatie
-* Hogeschool Rotterdam
+# Bronnen
+
+## Maatschappelijke bronnen
+
+- Pauluskerk Rotterdam
+https://www.pauluskerkrotterdam.nl/
+
+- Straatzorg Rotterdam
+https://straatzorgrotterdam.nl
+- Centraal Onthaal Rotterdam
+https://www.rotterdam.nl/dak-of-thuisloos
+- Stichting Ontmoeting Rotterdam
+https://www.ontmoeting.nl/locaties/rotterdam/
+- Juridisch Loket
+https://www.juridischloket.nl/
+- Gemeente Rotterdam
+https://www.rotterdam.nl/dak-of-thuisloos
+- Woonnet Rijnmond
+https://www.woonnetrijnmond.nl/nl-NL
+- Stichting Barka
+https://barkanl.org
+- IOM Nederland
+https://iom-nederland.nl
+---
+
+## AI en Machine Learning bronnen
+
+### Hugging Face
+
+- https://huggingface.co/
+
+### Sentence Transformers
+
+- https://www.sbert.net/docs/package_reference/sentence_transformer/index.html
+
+### Transformers documentatie
+
+- https://huggingface.co/docs/transformers/index
+
+
+### Streamlit documentatie
+
+- https://docs.streamlit.io/
+
+
+### OpenAI Python SDK
+
+- https://github.com/openai/openai-python
+
+---
+
+## Gebruikte modellen
+
+### Qwen 3 4B Instruct
+
+- https://huggingface.co/Qwen
+
+### Gemma
+
+- https://ai.google.dev/gemma
+
+### Sentence Transformer model
+
+- all-MiniLM-L6-v2
+
+- https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+
+---
+
+## Gebruikte technieken
+
+### Retrieval-Augmented Generation (RAG)
+
+- https://huggingface.co/learn/cookbook/rag_zephyr_langchain
+
+### Semantic Search
+
+- https://www.sbert.net/examples/applications/semantic-search/README.html
+
+### Embeddings
+
+- https://platform.openai.com/docs/guides/embeddings
+
+### Fine-tuning / SFT
+
+- https://huggingface.co/docs/trl/sft_trainer
+
+### LoRA
+
+- https://huggingface.co/papers/2106.09685
+
+---
 
