@@ -530,210 +530,165 @@ rottermaatje-chatbot/
 └── README.md
 ```
 # Installatie
+
 ## 1. Clone repository
+
 ```bash
 git clone https://github.com/Najahkh1/rottermaatje-chatbot.git
 cd rottermaatje-chatbot
+```
 
-2. Maak virtual environment
+## 2. Maak virtual environment
 
+```bash
 python3 -m venv .venv
+```
 
-3. Activeer virtual environment
+## 3. Activeer virtual environment
 
-Mac/Linux
+### Mac/Linux
 
+```bash
 source .venv/bin/activate
+```
 
-Windows
+### Windows
 
-.venv\\Scripts\\activate
+```bash
+.venv\Scripts\activate
+```
 
-4. Installeer dependencies
+## 4. Installeer dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-⸻
+---
 
-Applicatie starten
+# Applicatie starten
 
-Start Streamlit applicatie
-
+```bash
 streamlit run frontend/app.py
+```
 
-⸻
-Reproduceerbaarheid
+---
+
+# Reproduceerbaarheid
 
 Het project is reproduceerbaar door:
 
-* duidelijke mappenstructuur
-* requirements.txt
-* GitHub versiebeheer
-* experiment logging
-* vaste retrieval pipeline
-* opgeslagen evaluatiescripts
+- duidelijke mappenstructuur
+- `requirements.txt`
+- GitHub versiebeheer
+- experiment logging
+- vaste retrieval pipeline
+- opgeslagen evaluatiescripts
 
-⸻
+---
 
-Visualisaties
+# Visualisaties
 
 Visualisaties zijn gemaakt voor:
 
-* threshold vergelijking
-* modelvergelijking
-* train loss
-* evaluatie resultaten
-* SFT datasetgroei
+- threshold vergelijking
+- modelvergelijking
+- train loss
+- evaluatie resultaten
+- SFT datasetgroei
 
-Locatie
+## Locatie
 
+```text
 results/visuals/
+```
 
-⸻
+---
 
-Toekomstig werk
+# Toekomstig werk
 
 Mogelijke uitbreidingen:
 
-* grotere knowledge base
-* voice input
-* uitgebreidere evaluatie datasets
-* betere meertaligheid ondersteuning
+- grotere knowledge base
+- voice input
+- uitgebreidere evaluatie datasets
+- betere meertalige ondersteuning
 
-⸻
+---
 
-Ethische overwegingen
+# Ethische overwegingen
 
 Omdat het project werkt met kwetsbare groepen is extra aandacht besteed aan:
 
-* veiligheid
-* transparantie
-* betrouwbaarheid
-* beperking van hallucinations
-* duidelijke doorverwijzingen
+- veiligheid
+- transparantie
+- betrouwbaarheid
+- beperking van hallucinations
+- duidelijke doorverwijzingen
 
-De chatbot probeert geen vervanging te zijn voor hulpverleners, maar een ondersteunend hulpmiddel.
+De chatbot vervangt geen hulpverleners, maar is bedoeld als ondersteunend hulpmiddel.
 
-⸻
+---
 
-Conclusie
+# Conclusie
 
 RotterMaatje laat zien hoe AI gebruikt kan worden binnen maatschappelijke ondersteuning.
 
 Tijdens het project zijn meerdere AI-methoden onderzocht, geëvalueerd en verbeterd. Uiteindelijk bleek een combinatie van:
 
-* RAG
-* keyword retrieval
-* semantic retrieval
-* safety rules
+- RAG
+- keyword retrieval
+- semantic retrieval
+- safety rules
 
 het meest stabiel en betrouwbaar voor deze toepassing.
 
-⸻
+---
 
-Ontwikkeld met
+# Ontwikkeld met
 
-* Python
-* Streamlit
-* Sentence Transformers
-* Hugging Face Transformers
-* Scikit-learn
-* Pandas
-* Matplotlib
+- Python
+- Streamlit
+- Sentence Transformers
+- Hugging Face Transformers
+- Scikit-learn
+- Pandas
+- Matplotlib
 
-⸻
-
+---
 
 # Bronnen
 
 ## Maatschappelijke bronnen
 
-- Pauluskerk Rotterdam
-https://www.pauluskerkrotterdam.nl/
-
-- Straatzorg Rotterdam
-https://straatzorgrotterdam.nl
-- Centraal Onthaal Rotterdam
-https://www.rotterdam.nl/dak-of-thuisloos
-- Stichting Ontmoeting Rotterdam
-https://www.ontmoeting.nl/locaties/rotterdam/
-- Juridisch Loket
-https://www.juridischloket.nl/
-- Gemeente Rotterdam
-https://www.rotterdam.nl/dak-of-thuisloos
-- Woonnet Rijnmond
-https://www.woonnetrijnmond.nl/nl-NL
-- Stichting Barka
-https://barkanl.org
-- IOM Nederland
-https://iom-nederland.nl
----
+- [Pauluskerk Rotterdam](https://www.pauluskerkrotterdam.nl/)
+- [Straatzorg Rotterdam](https://straatzorgrotterdam.nl)
+- [Centraal Onthaal Rotterdam](https://www.rotterdam.nl/dak-of-thuisloos)
+- [Stichting Ontmoeting Rotterdam](https://www.ontmoeting.nl/locaties/rotterdam/)
+- [Juridisch Loket](https://www.juridischloket.nl/)
+- [Gemeente Rotterdam](https://www.rotterdam.nl/dak-of-thuisloos)
+- [Woonnet Rijnmond](https://www.woonnetrijnmond.nl/nl-NL)
+- [Stichting Barka](https://barkanl.org)
+- [IOM Nederland](https://iom-nederland.nl)
 
 ## AI en Machine Learning bronnen
 
-### Hugging Face
-
-- https://huggingface.co/
-
-### Sentence Transformers
-
-- https://www.sbert.net/docs/package_reference/sentence_transformer/index.html
-
-### Transformers documentatie
-
-- https://huggingface.co/docs/transformers/index
-
-
-### Streamlit documentatie
-
-- https://docs.streamlit.io/
-
-
-### OpenAI Python SDK
-
-- https://github.com/openai/openai-python
-
----
+- [Hugging Face](https://huggingface.co/)
+- [Sentence Transformers](https://www.sbert.net/docs/package_reference/sentence_transformer/index.html)
+- [Transformers documentatie](https://huggingface.co/docs/transformers/index)
+- [Streamlit documentatie](https://docs.streamlit.io/)
+- [OpenAI Python SDK](https://github.com/openai/openai-python)
 
 ## Gebruikte modellen
 
-### Qwen 3 4B Instruct
-
-- https://huggingface.co/Qwen
-
-### Gemma
-
-- https://ai.google.dev/gemma
-
-### Sentence Transformer model
-
-- all-MiniLM-L6-v2
-
-- https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
-
----
+- [Qwen](https://huggingface.co/Qwen)
+- [Gemma](https://ai.google.dev/gemma)
+- [Sentence Transformer all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 
 ## Gebruikte technieken
 
-### Retrieval-Augmented Generation (RAG)
-
-- https://huggingface.co/learn/cookbook/rag_zephyr_langchain
-
-### Semantic Search
-
-- https://www.sbert.net/examples/applications/semantic-search/README.html
-
-### Embeddings
-
-- https://platform.openai.com/docs/guides/embeddings
-
-### Fine-tuning / SFT
-
-- https://huggingface.co/docs/trl/sft_trainer
-
-### LoRA
-
-- https://huggingface.co/papers/2106.09685
-
----
-
+- [Retrieval-Augmented Generation](https://huggingface.co/learn/cookbook/rag_zephyr_langchain)
+- [Semantic Search](https://www.sbert.net/examples/applications/semantic-search/README.html)
+- [Embeddings](https://platform.openai.com/docs/guides/embeddings)
+- [Fine-tuning / SFT](https://huggingface.co/docs/trl/sft_trainer)
+- [LoRA](https://huggingface.co/papers/2106.09685)
