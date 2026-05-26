@@ -109,6 +109,7 @@ FAQ Matching
 LLM generatie
         ↓
 Veilig antwoord terug
+```
 ---
 
 # Meertalige ondersteuning
@@ -540,7 +541,7 @@ rottermaatje-chatbot/
 ├── visuals/
 ├── requirements.txt
 └── README.md
-
+```
 # Installatie
 ## 1. Clone repository
 ```bash
