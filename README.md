@@ -111,28 +111,20 @@ Veilig antwoord terug
 
 # Meertalige ondersteuning
 
-## RotterMaatje ondersteunt meerdere talen:
+RotterMaatje ondersteunt meerdere talen:
 
 - Nederlands
-
 - Engels
-
 - Arabisch
-
 - Pools
 
 ## Voorbeelden
 
 | Vraag | Antwoord |
-
 |---|---|
-
 | Ik heb honger | Gratis brood in de Pauluskerk |
-
 | انا جوعان | يوجد خبز مجاني |
-
 | Nie mam miejsca do spania | Hulp via Centraal Onthaal |
-
 ---
 
 # Safety Rules
