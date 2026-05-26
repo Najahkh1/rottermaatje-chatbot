@@ -1,5 +1,5 @@
 # RotterMaatje
-## AI-chatbot voor maatschappelijke ondersteuning in Rotterdam
+## AIchatbot voor maatschappelijke ondersteuning in Rotterdam
 RotterMaatje is een AI-chatbot ontwikkeld voor dakloze personen die hulp zoeken rondom dakloosheid, opvang, eten, douchen en maatschappelijke dienstverlening in Rotterdam.
 ---
 # Probleemstelling
@@ -298,7 +298,7 @@ Qwen werd gekozen als eindmodel.
 
 ---
 
-# Experiment 5 — Multilingual testing
+# Experiment 5 Multilingual testing
 
 ### Geteste talen
 
