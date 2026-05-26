@@ -35,11 +35,8 @@ Tijdens het project zijn meerdere Large Language Models (LLMs) gebruikt, getest 
 ## Geteste modellen
 
 | Model | Gebruik binnen project |
-
 |---|---|
-
 | Qwen 3 4B Instruct | Eindmodel voor chatbot |
-
 | Gemma 3 4B IT | Vergelijkingsmodel tijdens evaluaties |
 
 ## Waarom meerdere modellen?
