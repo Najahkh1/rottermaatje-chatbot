@@ -53,9 +53,9 @@ def main():
 
         per_device_train_batch_size=1,
 
-        num_train_epochs=3,
+        num_train_epochs=5,
 
-        learning_rate=2e-4,
+        learning_rate=1e-4,
 
         logging_steps=1,
 

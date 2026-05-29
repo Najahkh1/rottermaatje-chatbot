@@ -27,7 +27,6 @@ Het doel van RotterMaatje is:
 - veilige antwoorden genereren
 - gebruikers doorverwijzen naar hulpinstanties
 - hallucinerende AI-antwoorden beperken
-- een reproduceerbare AI-pipeline ontwikkelen
 ---
 # Onderzoeksdoel
 
@@ -49,96 +48,12 @@ Het uiteindelijke doel was het ontwikkelen van een chatbot die gebruikers snel k
 
 ---
 
-# Persoonlijke Leerdoelen
-
-Tijdens dit project wilde ik mij zowel technisch als professioneel verder ontwikkelen binnen het vakgebied Artificial Intelligence en Natural Language Processing.
-
-## 1. Werken met Large Language Models
-
-Ik wilde leren hoe moderne Large Language Models (LLMs) zoals Qwen en Gemma werken en hoe deze modellen kunnen worden ingezet binnen een praktische AI-toepassing.
-
-Hiervoor heb ik:
-
-- verschillende modellen getest en vergeleken;
-- prompts ontworpen en geëvalueerd;
-- modelgedrag geanalyseerd;
-- hallucinations onderzocht;
-- prestaties van verschillende modellen geëvalueerd.
-
-## 2. Werken met Retrieval-Augmented Generation (RAG)
-
-Ik wilde begrijpen hoe een chatbot betrouwbare informatie kan ophalen uit een kennisbank zonder volledig afhankelijk te zijn van het taalmodel.
-
-Hiervoor heb ik:
-
-- FAQ-datasets opgebouwd;
-- semantic retrieval geïmplementeerd;
-- keyword retrieval toegevoegd;
-- similarity matching getest;
-- retrieval thresholds geëvalueerd.
-
-## 3. Reinforcement Learning toepassen binnen NLP
-
-Ik wilde leren hoe Reinforcement Learning gebruikt kan worden binnen een NLP-systeem.
-
-Hiervoor heb ik:
-
-- een Contextual Multi-Armed Bandit ontwikkeld;
-- verschillende vraagtypes gedefinieerd;
-- retrievalstrategieën geëvalueerd;
-- rewards berekend;
-- onderzocht hoe strategie-selectie automatisch kan plaatsvinden.
-
-## 4. Fine-tuning en modeloptimalisatie
-
-Ik wilde ervaring opdoen met het trainen en aanpassen van bestaande taalmodellen.
-
-Hiervoor heb ik:
-
-- een eigen SFT-dataset samengesteld;
-- LoRA-training uitgevoerd;
-- trainingsresultaten geëvalueerd;
-- fine-tuned modellen vergeleken met retrieval-gebaseerde oplossingen.
-
-Uit de experimenten bleek dat fine-tuning interessante resultaten opleverde, maar dat de retrieval-gebaseerde aanpak betrouwbaarder bleef voor deze toepassing.
-
-## 5. Veiligheid en Responsible AI
-
-Omdat RotterMaatje gericht is op kwetsbare doelgroepen wilde ik leren hoe AI-systemen op een veilige en verantwoorde manier ontwikkeld kunnen worden.
-
-Hiervoor heb ik:
-
-- safety rules ontwikkeld;
-- medische en risicovolle vragen afgevangen;
-- fallback mechanismen toegevoegd;
-- meertalige veiligheid getest;
-- hallucinations geanalyseerd en beperkt.
-
-## 6. Reproduceerbaar werken
-
-Ik wilde leren hoe AI-projecten professioneel worden opgezet zodat experimenten reproduceerbaar zijn.
-
-Hiervoor heb ik:
-
-- gewerkt met Git en GitHub;
-- experimenten gedocumenteerd;
-- een duidelijke projectstructuur aangehouden;
-- evaluatiescripts ontwikkeld;
-- resultaten vastgelegd in documentatie en visualisaties.
-
----
-
-# Resultaat
-
-Door dit project heb ik ervaring opgedaan met moderne NLP-technieken, Large Language Models, Retrieval-Augmented Generation, Reinforcement Learning, Fine-tuning en Responsible AI. Daarnaast heb ik geleerd hoe een AI-project gestructureerd wordt ontwikkeld, geëvalueerd en gedocumenteerd binnen een maatschappelijke context.
-
 # Doelgroep
 De chatbot richt zich op:
 - dak- en thuisloze personen
 - mensen zonder papieren
 - vrijwilligers
 - hulpverleners
-- maatschappelijke organisaties
 ---
 # Gebruikte modellen
 
@@ -167,6 +82,7 @@ De modellen zijn getest op:
 
 - consistentie van antwoorden
 
+
 ##  Waarom Qwen als eindmodel?
 
 Qwen gaf tijdens de experimenten:
@@ -183,6 +99,32 @@ Qwen gaf tijdens de experimenten:
 
 Daardoor werd Qwen gekozen als uiteindelijke chatbotmodel.
 
+## Waarom is Gemma niet gekozen als eindmodel?
+
+Tijdens het project zijn zowel Gemma 3 4B IT als Qwen 3 4B Instruct getest.
+
+Gemma liet zien dat het model goed in staat is om natuurlijke gesprekken te voeren en algemene vragen te beantwoorden. Daarnaast was het model eenvoudig lokaal te draaien voor experimenten met retrieval en fine-tuning.
+
+### Sterke punten van Gemma
+
+- natuurlijke en vloeiende antwoorden;
+- goede prestaties bij algemene gesprekken;
+- relatief lichtgewicht model voor lokale experimenten;
+- geschikt voor fine-tuning experimenten;
+- goede integratie met het Hugging Face ecosysteem;
+- consistente prestaties bij eenvoudige FAQ-vragen.
+
+### Beperkingen die tijdens het project werden gevonden
+
+- minder consistente antwoorden bij retrieval-vragen;
+- meer variatie tussen antwoorden op vergelijkbare vragen;
+- minder stabiele prestaties bij meertalige vragen;
+- meer kans op antwoorden buiten de FAQ-context;
+- helper-context vragen werden minder goed ondersteund.
+
+### Conclusie
+
+Hoewel Gemma goede resultaten liet zien voor algemene gesprekken en experimenten met fine-tuning, presteerde Qwen beter op retrieval, veiligheid, meertalige ondersteuning en consistentie van antwoorden. Daarom is uiteindelijk gekozen voor Qwen 3 4B Instruct als eindmodel voor RotterMaatje.
 ---
 
 
