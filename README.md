@@ -2,6 +2,15 @@
 ## AIchatbot voor maatschappelijke ondersteuning in Rotterdam
 RotterMaatje is een AI-chatbot ontwikkeld voor dakloze personen die hulp zoeken rondom dakloosheid, opvang, eten, douchen en maatschappelijke dienstverlening in Rotterdam.
 ---
+# Hoofdvraag
+
+Hoe kan een AI-chatbot dak- en thuisloze personen in Rotterdam ondersteunen bij het vinden van betrouwbare informatie over opvang, voedsel, zorg en maatschappelijke hulp?
+---
+# Hypothese
+
+Wij verwachten dat een AI-chatbot die gebruikmaakt van Retrieval-Augmented Generation (RAG), semantic retrieval, keyword retrieval, safety rules en reinforcement learning gebruikers sneller en betrouwbaarder kan ondersteunen bij het vinden van maatschappelijke hulp dan traditionele zoekmethoden.
+---
+
 # Probleemstelling
 Mensen die dakloos zijn of maatschappelijke hulp nodig hebben ervaren vaak problemen bij:
 - het vinden van betrouwbare informatie
@@ -20,6 +29,109 @@ Het doel van RotterMaatje is:
 - hallucinerende AI-antwoorden beperken
 - een reproduceerbare AI-pipeline ontwikkelen
 ---
+# Onderzoeksdoel
+
+Het doel van dit project is het ontwikkelen, testen en evalueren van een AI-chatbot die dak- en thuisloze personen in Rotterdam ondersteunt bij het vinden van betrouwbare informatie over opvang, voedselvoorzieningen, zorg, juridische ondersteuning en maatschappelijke hulp.
+
+Tijdens het project is onderzocht hoe verschillende AI-technieken kunnen worden gecombineerd om betrouwbare en veilige antwoorden te genereren voor kwetsbare doelgroepen. Hierbij is gekeken naar de inzet van:
+
+- Retrieval-Augmented Generation (RAG)
+- Semantic Retrieval
+- Keyword Retrieval
+- Safety Rules
+- Reinforcement Learning (Contextual Bandits)
+- Fine-tuning (SFT/LoRA)
+- Meertalige ondersteuning
+
+Daarnaast is onderzocht welke combinatie van technieken het meest geschikt is voor maatschappelijke ondersteuning. De focus lag hierbij op betrouwbaarheid, veiligheid, toegankelijkheid en het beperken van hallucinerende antwoorden.
+
+Het uiteindelijke doel was het ontwikkelen van een chatbot die gebruikers snel kan doorverwijzen naar passende hulpinstanties en tegelijkertijd begrijpelijke en veilige antwoorden geeft.
+
+---
+
+# Persoonlijke Leerdoelen
+
+Tijdens dit project wilde ik mij zowel technisch als professioneel verder ontwikkelen binnen het vakgebied Artificial Intelligence en Natural Language Processing.
+
+## 1. Werken met Large Language Models
+
+Ik wilde leren hoe moderne Large Language Models (LLMs) zoals Qwen en Gemma werken en hoe deze modellen kunnen worden ingezet binnen een praktische AI-toepassing.
+
+Hiervoor heb ik:
+
+- verschillende modellen getest en vergeleken;
+- prompts ontworpen en geëvalueerd;
+- modelgedrag geanalyseerd;
+- hallucinations onderzocht;
+- prestaties van verschillende modellen geëvalueerd.
+
+## 2. Werken met Retrieval-Augmented Generation (RAG)
+
+Ik wilde begrijpen hoe een chatbot betrouwbare informatie kan ophalen uit een kennisbank zonder volledig afhankelijk te zijn van het taalmodel.
+
+Hiervoor heb ik:
+
+- FAQ-datasets opgebouwd;
+- semantic retrieval geïmplementeerd;
+- keyword retrieval toegevoegd;
+- similarity matching getest;
+- retrieval thresholds geëvalueerd.
+
+## 3. Reinforcement Learning toepassen binnen NLP
+
+Ik wilde leren hoe Reinforcement Learning gebruikt kan worden binnen een NLP-systeem.
+
+Hiervoor heb ik:
+
+- een Contextual Multi-Armed Bandit ontwikkeld;
+- verschillende vraagtypes gedefinieerd;
+- retrievalstrategieën geëvalueerd;
+- rewards berekend;
+- onderzocht hoe strategie-selectie automatisch kan plaatsvinden.
+
+## 4. Fine-tuning en modeloptimalisatie
+
+Ik wilde ervaring opdoen met het trainen en aanpassen van bestaande taalmodellen.
+
+Hiervoor heb ik:
+
+- een eigen SFT-dataset samengesteld;
+- LoRA-training uitgevoerd;
+- trainingsresultaten geëvalueerd;
+- fine-tuned modellen vergeleken met retrieval-gebaseerde oplossingen.
+
+Uit de experimenten bleek dat fine-tuning interessante resultaten opleverde, maar dat de retrieval-gebaseerde aanpak betrouwbaarder bleef voor deze toepassing.
+
+## 5. Veiligheid en Responsible AI
+
+Omdat RotterMaatje gericht is op kwetsbare doelgroepen wilde ik leren hoe AI-systemen op een veilige en verantwoorde manier ontwikkeld kunnen worden.
+
+Hiervoor heb ik:
+
+- safety rules ontwikkeld;
+- medische en risicovolle vragen afgevangen;
+- fallback mechanismen toegevoegd;
+- meertalige veiligheid getest;
+- hallucinations geanalyseerd en beperkt.
+
+## 6. Reproduceerbaar werken
+
+Ik wilde leren hoe AI-projecten professioneel worden opgezet zodat experimenten reproduceerbaar zijn.
+
+Hiervoor heb ik:
+
+- gewerkt met Git en GitHub;
+- experimenten gedocumenteerd;
+- een duidelijke projectstructuur aangehouden;
+- evaluatiescripts ontwikkeld;
+- resultaten vastgelegd in documentatie en visualisaties.
+
+---
+
+# Resultaat
+
+Door dit project heb ik ervaring opgedaan met moderne NLP-technieken, Large Language Models, Retrieval-Augmented Generation, Reinforcement Learning, Fine-tuning en Responsible AI. Daarnaast heb ik geleerd hoe een AI-project gestructureerd wordt ontwikkeld, geëvalueerd en gedocumenteerd binnen een maatschappelijke context.
+
 # Doelgroep
 De chatbot richt zich op:
 - dak- en thuisloze personen
