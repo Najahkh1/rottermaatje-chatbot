@@ -89,21 +89,26 @@ Daardoor werd Qwen gekozen als uiteindelijke chatbotmodel.
 | Safety Rules | Onveilige of medische antwoorden blokkeren |
 | Language Detection | Herkennen van Nederlands, Engels, Arabisch en Pools |
 | Streamlit | Frontend en chat-interface bouwen |
+| Reinforcement Learning (Contextual Bandit) | Dynamisch kiezen van retrieval- en safetystrategie |
 
 # Architectuur van het systeem
+
 ## Pipeline
+
 ```text
 Gebruiker vraag
         ↓
+Language Detection
+        ↓
+RL Strategy Selector
+        ↓
 Safety Rules
         ↓
-Keyword Retrieval
-        ↓
-Semantic Retrieval
+Keyword Retrieval / Semantic Retrieval
         ↓
 FAQ Matching
         ↓
-LLM generatie
+Qwen 3 4B Instruct
         ↓
 Veilig antwoord terug
 ```
@@ -386,6 +391,58 @@ Vrijwilliger-vragen werden correct ondersteund.
 
 De chatbot ondersteunt nu meerdere doelgroepen en begrijpt ook vragen van vrijwilligers en hulpverleners.
 
+# Experiment 8 Reinforcement Learning
+
+## Doel
+
+Onderzoeken of de chatbot automatisch kan leren welke retrievalstrategie het beste werkt voor verschillende soorten vragen.
+
+## Aanpak
+
+Er is een Contextual Multi-Armed Bandit ontwikkeld.
+
+De RL-component bepaalt eerst het vraagtype en kiest vervolgens automatisch een strategie.
+
+### Mogelijke strategieën
+
+- keyword_retrieval
+- semantic_retrieval
+- safety_response
+- fallback_response
+
+### Vraagtypes
+
+- food_question
+- hygiene_question
+- safety_question
+- medical_emergency
+- helper_food_question
+- helper_shelter_question
+- medical_care_question
+- identity_question
+- undocumented_question
+- postal_address_question
+
+## Resultaten
+
+Gemiddelde reward:
+
+0.67
+
+Voorbeelden:
+
+| Vraagtype | Beste strategie |
+|---|---|
+| Food question | Keyword Retrieval |
+| Hygiene question | Semantic Retrieval |
+| Safety question | Safety Response |
+| Medical emergency | Safety Response |
+| Helper shelter question | Semantic Retrieval |
+
+## Conclusie
+
+De RL-component werd opgenomen in de uiteindelijke pipeline als strategie-selector.
+
 ## Evaluatie
 
 De chatbot werd getest op:
@@ -405,6 +462,13 @@ De chatbot werd getest op:
 - helper-context detectie
 
 - fallback responses
+
+- RL-gebaseerde strategie selectie
+
+- geëvalueerde fine-tuning aanpak
+
+- reproduceerbare trainingspipeline
+
 
 ## Geteste scenario’s
 
@@ -463,8 +527,67 @@ De combinatie van:
 
 - safety rules
 
+- Qwen 3 4B Instruct
+
+- RL Strategy Selector
+
+
+
 gaf de meest stabiele en veilige resultaten voor maatschappelijke ondersteuning.
 
+Fine-tuning werd succesvol onderzocht, maar bleek minder betrouwbaar dan de retrieval-gebaseerde aanpak.
+
+# Experiment 8 Reinforcement Learning
+
+## Doel
+
+Onderzoeken of de chatbot automatisch kan leren welke retrievalstrategie het beste werkt voor verschillende soorten vragen.
+
+## Aanpak
+
+Er is een Contextual Multi-Armed Bandit ontwikkeld.
+
+De RL-component bepaalt eerst het vraagtype en kiest vervolgens automatisch een strategie.
+
+### Mogelijke strategieën
+
+- keyword_retrieval
+- semantic_retrieval
+- safety_response
+- fallback_response
+
+### Vraagtypes
+
+- food_question
+- hygiene_question
+- safety_question
+- medical_emergency
+- helper_food_question
+- helper_shelter_question
+- medical_care_question
+- identity_question
+- undocumented_question
+- postal_address_question
+
+## Resultaten
+
+Gemiddelde reward:
+
+0.67
+
+Voorbeelden:
+
+| Vraagtype | Beste strategie |
+|---|---|
+| Food question | Keyword Retrieval |
+| Hygiene question | Semantic Retrieval |
+| Safety question | Safety Response |
+| Medical emergency | Safety Response |
+| Helper shelter question | Semantic Retrieval |
+
+## Conclusie
+
+De RL-component werd opgenomen in de uiteindelijke pipeline als strategie-selector.
 ---
 
 # Functionaliteiten
@@ -692,3 +815,10 @@ het meest stabiel en betrouwbaar voor deze toepassing.
 - [Embeddings](https://platform.openai.com/docs/guides/embeddings)
 - [Fine-tuning / SFT](https://huggingface.co/docs/trl/sft_trainer)
 - [LoRA](https://huggingface.co/papers/2106.09685)
+- [Reinforcement Learning](https://huggingface.co/learn/deep-rl-course)
+
+- [Multi-Armed Bandit](https://www.tensorflow.org/agents/tutorials/intro_bandit)
+
+- [Contextual Bandit](https://arxiv.org/abs/1003.0146)
+
+- [Contextual Bandits with Linear Payoff Functions](https://arxiv.org/abs/1502.05477)
