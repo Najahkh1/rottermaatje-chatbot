@@ -1,5 +1,5 @@
 # RotterMaatje
-## AIchatbot voor maatschappelijke ondersteuning in Rotterdam
+## AI chatbot voor maatschappelijke ondersteuning in Rotterdam
 RotterMaatje is een AI-chatbot ontwikkeld voor dakloze personen die hulp zoeken rondom dakloosheid, opvang, eten, douchen en maatschappelijke dienstverlening in Rotterdam.
 ---
 # Hoofdvraag
@@ -8,7 +8,7 @@ Hoe kan een AI-chatbot dak- en thuisloze personen in Rotterdam ondersteunen bij 
 ---
 # Hypothese
 
-Wij verwachten dat een AI-chatbot die gebruikmaakt van Retrieval-Augmented Generation (RAG), semantic retrieval, keyword retrieval, safety rules en reinforcement learning gebruikers sneller en betrouwbaarder kan ondersteunen bij het vinden van maatschappelijke hulp dan traditionele zoekmethoden.
+De verwaching is dat een AI-chatbot die gebruikmaakt van Retrieval-Augmented Generation (RAG), semantic retrieval, keyword retrieval, safety rules en reinforcement learning gebruikers sneller en betrouwbaarder kan ondersteunen bij het vinden van maatschappelijke hulp dan traditionele zoekmethoden.
 ---
 
 # Probleemstelling
