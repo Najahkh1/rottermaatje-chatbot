@@ -16,7 +16,7 @@ from trl import SFTTrainer
 
 MODEL_NAME = "Qwen/Qwen2.5-0.5B-Instruct"
 
-DATASET_PATH = "data/evaluations/sft_dataset.jsonl"
+DATASET_PATH = "data/sft/rottermaatje_sft_v2.jsonl"
 
 
 def main():
@@ -49,7 +49,7 @@ def main():
     )
 
     training_args = TrainingArguments(
-        output_dir="models/rottermaatje-sft",
+        output_dir="models/rottermaatje-sft-v2",
 
         per_device_train_batch_size=1,
 

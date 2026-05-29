@@ -5,7 +5,7 @@ import torch
 
 BASE_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
 
-LORA_PATH = "models/rottermaatje-sft"
+LORA_PATH = "models/rottermaatje-sft-v2"
 
 
 def main():
