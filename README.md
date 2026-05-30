@@ -820,21 +820,6 @@ Na uitbreiding van de trainingsvoorbeelden, extra vraagtypes en integratie in de
 
 **0.80**
 
-### Voorbeelden
-
-| Vraagtype | Beste strategie |
-|---|---|
-| Food question | Keyword Retrieval |
-| Hygiene question | Semantic Retrieval |
-| Safety question | Safety Response |
-| Medical emergency | Safety Response |
-| Helper shelter question | Semantic Retrieval |
-| Recovery question | Safety Response |
-| Suicide question | Safety Response |
-| Identity question | Semantic Retrieval |
-| Medical care question | Semantic Retrieval |
-| Unknown question | Fallback Response |
-
 ## Fine-tuning evaluatie
 
 Tijdens het project is onderzocht of fine-tuning de prestaties van de chatbot kon verbeteren ten opzichte van de retrieval-gebaseerde aanpak.
@@ -965,14 +950,6 @@ De chatbot ondersteunt meerdere talen:
 
 Door middel van language detection wordt automatisch geprobeerd de taal van de gebruiker te herkennen.
 
-### Voorbeelden
-
-| Vraag | Taal |
-|---------|---------|
-| Ik heb honger | Nederlands |
-| I am hungry | Engels |
-| انا جوعان | Arabisch |
-| Jestem głodny | Pools |
 
 ## Safety Rules
 
@@ -991,12 +968,6 @@ De chatbot:
 
 De chatbot herkent signalen die kunnen wijzen op suïcidaliteit of ernstige psychische nood.
 
-### Voorbeelden
-
-- ik wil dood
-- ik wil niet meer leven
-- i want to die
-
 In deze situaties verwijst de chatbot door naar:
 
 - 113 Zelfmoordpreventie
@@ -1007,11 +978,6 @@ In deze situaties verwijst de chatbot door naar:
 
 De chatbot herkent vragen over verslaving en afkicken.
 
-### Voorbeelden
-
-- ik wil afkicken
-- ik ben verslaafd
-- ik wil stoppen met drugs
 
 De chatbot verwijst gebruikers vervolgens naar passende ondersteuning zoals Straatzorg Rotterdam of een hulpverlener.
 
