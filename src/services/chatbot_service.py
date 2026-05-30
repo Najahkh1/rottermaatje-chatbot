@@ -4,6 +4,7 @@ import json
 from rag.faq_loader import FAQLoader
 from rag.faq_retriever import FAQRetriever
 from evaluation.rl_strategy_selector import RLStrategySelector
+from rag.hybrid_retriever import HybridRetriever
 
 from safety.safety_rules import (
     is_helper_context,
@@ -56,7 +57,7 @@ class ChatbotService:
         except Exception:
             print("Geen web_sources.json gevonden.")
 
-        self.retriever = FAQRetriever()
+        self.retriever = HybridRetriever()
 
         self.retriever.fit(self.faq_data)
 
