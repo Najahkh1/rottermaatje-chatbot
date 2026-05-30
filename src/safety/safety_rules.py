@@ -141,6 +141,9 @@ def is_drug_question(text):
     if is_helper_context(text):
         return False
 
+    if is_recovery_question(text):
+        return False
+
     drug_words = [
         "drugs",
         "cocaine",
@@ -148,13 +151,9 @@ def is_drug_question(text):
         "wiet",
         "heroine",
         "heroïne",
-        "verslaafd",
-        "afkicken",
         "meth",
         "crack",
-
         "مخدرات",
-        "ادمان",
         "حشيش"
     ]
 
@@ -163,6 +162,52 @@ def is_drug_question(text):
         for word in drug_words
     )
 
+
+def is_suicide_question(text):
+    text_lower = text.lower()
+
+    suicide_words = [
+        "ik wil dood",
+        "ik wil sterven",
+        "ik wil niet meer leven",
+        "ik wil mezelf doden",
+        "ik wil mezelf pijn doen",
+        "zelfmoord",
+        "suicide",
+        "ik zie het niet meer zitten",
+        "i want to die",
+        "i want to kill myself",
+        "أريد أن أموت",
+        "انتحار"
+    ]
+
+    return any(
+        word in text_lower
+        for word in suicide_words
+    )
+
+
+def is_recovery_question(text):
+    text_lower = text.lower()
+
+    recovery_words = [
+        "ik wil afkicken",
+        "ik wil stoppen met drugs",
+        "ik wil stoppen met gebruiken",
+        "ik wil stoppen",
+        "ik ben verslaafd",
+        "hulp bij verslaving",
+        "afkickhulp",
+        "verslavingszorg",
+        "i want to stop using drugs",
+        "i am addicted",
+        "addiction help"
+    ]
+
+    return any(
+        word in text_lower
+        for word in recovery_words
+    )
 
 def get_medical_safety_response(language="Nederlands"):
     if language == "Arabisch":
@@ -203,7 +248,49 @@ def get_drug_safety_response(language="Nederlands"):
         "Ik kan geen advies geven over drugsgebruik. "
         "Vraag hulp aan een medewerker of hulpverlener."
     )
+def get_suicide_safety_response(language="Nederlands"):
+    if language == "Arabisch":
+        return (
+            "يبدو أنك تمر بوقت صعب جدًا. "
+            "اطلب المساعدة فورًا من شخص تثق به أو من أحد العاملين. "
+            "إذا كنت في خطر مباشر، اتصل بالرقم 112."
+        )
 
+    if language == "Engels":
+        return (
+            "It sounds like you are having a very difficult time. "
+            "Please talk to a support worker, staff member, or someone you trust now. "
+            "If you are in immediate danger, call 112."
+        )
+
+    return (
+        "Het klinkt alsof je het heel moeilijk hebt. "
+        "Praat nu met een hulpverlener, medewerker of iemand die je vertrouwt. "
+        "Bij direct gevaar: bel 112. "
+        "Je kunt ook contact opnemen met 113 Zelfmoordpreventie via 113 of 0800-0113."
+    )
+
+
+def get_recovery_response(language="Nederlands"):
+    if language == "Arabisch":
+        return (
+            "يمكنك طلب المساعدة من Straatzorg Rotterdam أو من أحد العاملين. "
+            "قل إنك تريد التوقف عن استخدام المخدرات. "
+            "يمكن لمقدم الرعاية مساعدتك في الخطوة التالية."
+        )
+
+    if language == "Engels":
+        return (
+            "You can ask Straatzorg Rotterdam or a support worker for help. "
+            "Tell them you want to stop using drugs. "
+            "A professional can help you with the next step."
+        )
+
+    return (
+        "Je kunt hulp vragen bij Straatzorg Rotterdam of een hulpverlener. "
+        "Vertel dat je wilt stoppen met gebruiken. "
+        "Een medewerker kan je helpen met de volgende stap."
+    )
 
 def get_fallback_response(language="Nederlands"):
     if language == "Arabisch":

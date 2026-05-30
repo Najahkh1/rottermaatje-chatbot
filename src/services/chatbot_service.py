@@ -14,7 +14,15 @@ from safety.safety_rules import (
     is_drug_question,
     get_medical_safety_response,
     get_drug_safety_response,
-    get_fallback_response
+    get_fallback_response,
+    is_suicide_question,
+    get_suicide_safety_response,
+    is_recovery_question,
+    get_recovery_response,
+    is_suicide_question,
+    get_suicide_safety_response,
+    is_recovery_question,
+    get_recovery_response
 )
 
 
@@ -153,6 +161,16 @@ Geef een kort, veilig en duidelijk antwoord.
         user_language = detect_language(
             user_question
         )
+        if is_suicide_question(user_question):
+            return get_suicide_safety_response(
+                user_language
+            )
+
+        if is_recovery_question(user_question):
+            return get_recovery_response(
+                user_language
+            )
+
         strategy = self.rl_selector.select_action(user_question)
         selected_action = strategy["action"]
         print("\nRL strategy:")
