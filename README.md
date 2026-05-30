@@ -645,7 +645,7 @@ Vrijwilliger-vragen werden ondersteund.
 
 ### Conclusie
 
-De chatbot ondersteunt nu meerdere doelgroepen en begrijpt ook vragen van vrijwilligers en hulpverleners.
+De chatbot ondersteunt nu meerdere doelgroepen dus niet alleen de daklozen zelf en begrijpt ook vragen van vrijwilligers en hulpverleners.
 
 # Experiment 8 Reinforcement Learning
 
@@ -678,12 +678,23 @@ De RL-component bepaalt eerst het vraagtype en kiest vervolgens automatisch een 
 - identity_question
 - undocumented_question
 - postal_address_question
+- recovery_question
+- suicide_question
+
 
 ## Resultaten
+
+### Eerste versie
 
 Gemiddelde reward:
 
 0.67
+
+### Verbeterde versie
+
+Na uitbreiding van de trainingsvoorbeelden, extra vraagtypes en integratie van de RL-selector in de chatbot steeg de gemiddelde reward naar:
+
+0.80
 
 Voorbeelden:
 
@@ -694,11 +705,45 @@ Voorbeelden:
 | Safety question | Safety Response |
 | Medical emergency | Safety Response |
 | Helper shelter question | Semantic Retrieval |
+| Recovery question | Safety Response |
+| Suicide question | Safety Response |
+| Medical care question | Semantic Retrieval |
+| Identity question | Semantic Retrieval |
+| Unknown question | Fallback Response |
 
 ## Conclusie
 
 De RL-component werd opgenomen in de uiteindelijke pipeline als strategie-selector.
----
+
+Door extra trainingsvoorbeelden toe te voegen en meer vraagtypes te ondersteunen verbeterde de gemiddelde reward van 0.67 naar 0.80. Hierdoor kon de chatbot consistenter bepalen welke retrievalstrategie het meest geschikt was voor verschillende soorten hulpvragen. De geselecteerde strategie wordt vervolgens gebruikt om  te kiezen tussen keyword retrieval, semantic retrieval, safety responses en fallback responses.
+
+# Experiment 9 Hybrid Retrieval
+
+## Doel
+
+Onderzoeken of een combinatie van keyword retrieval en semantic retrieval betere resultaten geeft dan beide methoden afzonderlijk.
+
+## Aanpak
+
+Er is een Hybrid Retriever ontwikkeld die:
+
+- TF-IDF keyword retrieval gebruikt
+- Semantic retrieval gebruikt
+- Beide scores combineert
+
+## Resultaten
+
+De Hybrid Retriever gaf stabielere resultaten dan de losse retrievalmethodes.
+
+Voordelen:
+
+- betere FAQ matching
+- minder gemiste relevante antwoorden
+- robuustere prestaties bij verschillende formuleringen
+
+## Conclusie
+
+De Hybrid Retriever werd opgenomen in de uiteindelijke pipeline en vormt de primaire retrievallaag van RotterMaatje.
 # Evaluatie
 
 De chatbot is geëvalueerd op betrouwbaarheid, veiligheid, retrievalkwaliteit en bruikbaarheid voor de doelgroep. Hierbij is gekeken naar zowel de technische werking van de pipeline als de inhoudelijke kwaliteit van de antwoorden.
